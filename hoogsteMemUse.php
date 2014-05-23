@@ -2,7 +2,7 @@
 
 class hoogsteMemUse
 {
-	public $highestValue = 0;
+	public $highestValue;
 
 	public function hoogsteMemUse($list)
 	{
