@@ -16,17 +16,6 @@ class opdracht
 {
 	public $meerDan5LoadTijd = 0;
 
-	public $list = array(
-	  array( 0.2, 500, 'routeA' ),
-	  array( 0.4, 300, 'routeA' ),
-	  array( 0.5, 3500, 'routeB' ),
-	  array( 0.7, 700, 'routeA' ),
-	  array( 0.1, 800, 'routeB' ),
-	  array( 0.1, 900, 'routeA' ),
-	  array( 0.1, 100, 'routeB' ),
-	  array( 0.05, 250, 'routeC' ),
-	  array( 1.2, 400, 'routeA' ),
-	);
 
 	public function meerDan5LoadTijd($list)
 	{
@@ -40,6 +29,18 @@ class opdracht
 	}
 }
 
+
+$list = array(
+  array( 0.2, 500, 'routeA' ),
+  array( 0.4, 300, 'routeA' ),
+  array( 0.5, 3500, 'routeB' ),
+  array( 0.7, 700, 'routeA' ),
+  array( 0.1, 800, 'routeB' ),
+  array( 0.1, 900, 'routeA' ),
+  array( 0.1, 100, 'routeB' ),
+  array( 0.05, 250, 'routeC' ),
+  array( 1.2, 400, 'routeA' ),
+);
+
 $x = new opdracht();
-$bla = $x->meerDan5LoadTijd($x->list);
 var_dump($bla);
