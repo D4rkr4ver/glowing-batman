@@ -1,6 +1,7 @@
 <?php
 
-/*gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugengebruik (int), route (string) ), lees de hele lijst door en bereken de volgende business requirements:
+/*
+gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugengebruik (int), route (string) ), lees de hele lijst door en bereken de volgende business requirements:
 
 - avg load tijd van alle requests die meer dan 1000 memory gebruiken
 - aantal requests dat meer dan 0.5 load tijd hebben
@@ -10,8 +11,6 @@
 
 voorbeeldje:
 */
-
-
 
 class opdracht
 {
