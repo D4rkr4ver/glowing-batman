@@ -29,7 +29,7 @@ class opdracht
 	  array( 1.2, 400, 'routeA' ),
 	);
 
-	public function meerDan5LoadTijd()
+	public function meerDan5LoadTijd($list)
 	{
 		foreach ($this->list as $value) {
 			if ($value[0] > 0.5) {
@@ -42,5 +42,5 @@ class opdracht
 }
 
 $x = new opdracht();
-$bla = $x->meerDan5LoadTijd();
+$bla = $x->meerDan5LoadTijd($x->list);
 var_dump($bla);
