@@ -43,4 +43,6 @@ $list = array(
 );
 
 $x = new opdracht();
-var_dump($bla);
+$avgLoadTijd = $x->avgLoadTijd($list);
+$meerDan5LoadTijd = $x->meerDan5LoadTijd($list);
+var_dump($meerDan5LoadTijd);
