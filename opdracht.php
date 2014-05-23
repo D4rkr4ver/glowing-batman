@@ -6,14 +6,13 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 * avg load tijd van alle requests die meer dan 1000 memory gebruiken
 * aantal requests dat meer dan 0.5 load tijd hebben
 - naam van de vaakst aangeroepen route + aantal
-- time, mem_use, route van het single request met de hoogste memory use
+* time, mem_use, route van het single request met de hoogste memory use
 - route naam en totaal time, mem_use van de route die overall de meeste time gebruikt heeft
-
-voorbeeldje:
 */
 
 require_once('avgLoadTijd.php');
 require_once('meerDan5LoadTijd.php');
+require_once('hoogsteMemUse.php');
 
 $list = array(
   array( 0.2, 500, 'routeA' ),
@@ -29,6 +28,8 @@ $list = array(
 
 $avgLoadTijd = new avgLoadTijd($list);
 $meerDan5LoadTijd = new meerDan5LoadTijd($list);
+$hoogsteMemUse = new hoogsteMemUse($list);
 
 var_dump($avgLoadTijd);
 var_dump($meerDan5LoadTijd);
+var_dump($hoogsteMemUse);
