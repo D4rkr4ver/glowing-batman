@@ -1,6 +1,6 @@
 <?php
 
-class hoogsteMemUse
+class HoogsteMemUse
 {
 	public $highestValue;
 

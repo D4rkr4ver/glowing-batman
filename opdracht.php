@@ -10,9 +10,9 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 - route naam en totaal time, mem_use van de route die overall de meeste time gebruikt heeft
 */
 
-require_once('avgLoadTijd.php');
-require_once('meerDan5LoadTijd.php');
-require_once('hoogsteMemUse.php');
+require_once('AvgLoadTijd.php');
+require_once('MeerDanLoadTijd.php');
+require_once('HoogsteMemUse.php');
 
 $list = array(
   array( 0.2, 500, 'routeA' ),
@@ -26,10 +26,10 @@ $list = array(
   array( 1.2, 400, 'routeA' ),
 );
 
-$avgLoadTijd = new avgLoadTijd($list);
-$meerDan5LoadTijd = new meerDan5LoadTijd($list);
-$hoogsteMemUse = new hoogsteMemUse($list);
+$avgLoadTijd = new AvgLoadTijd($list, 1000);
+$meerDanLoadTijd = new MeerDanLoadTijd($list, 0.5);
+$hoogsteMemUse = new HoogsteMemUse($list);
 
 var_dump($avgLoadTijd);
-var_dump($meerDan5LoadTijd);
+var_dump($meerDanLoadTijd);
 var_dump($hoogsteMemUse);
