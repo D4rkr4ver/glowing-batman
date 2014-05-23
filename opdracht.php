@@ -14,8 +14,22 @@ voorbeeldje:
 
 class opdracht
 {
+	public $avgLoadTijd = 0;
 	public $meerDan5LoadTijd = 0;
 
+	public function avgLoadTijd($list)
+	{
+		$count = 0;
+
+		foreach ($list as $value) {
+			if ($value[1] > 1000) {
+				$count++;
+				$this->avgLoadTijd += $value[0];
+			}
+		}
+		
+		return $this->avgLoadTijd / $count;
+	}
 
 	public function meerDan5LoadTijd($list)
 	{
@@ -45,4 +59,5 @@ $list = array(
 $x = new opdracht();
 $avgLoadTijd = $x->avgLoadTijd($list);
 $meerDan5LoadTijd = $x->meerDan5LoadTijd($list);
+var_dump($avgLoadTijd);
 var_dump($meerDan5LoadTijd);
