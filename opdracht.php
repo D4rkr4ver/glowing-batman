@@ -30,7 +30,7 @@ class opdracht
 
 	public function meerDan5LoadTijd($list)
 	{
-		foreach ($this->list as $value) {
+		foreach ($list as $value) {
 			if ($value[0] > 0.5) {
 				$this->meerDan5LoadTijd++;
 			}
