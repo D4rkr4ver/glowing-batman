@@ -3,7 +3,7 @@
 class HoogsteMemUse
 {
 
-	public function hoogsteMemUse($list)
+	public function hoogsteMemUse1($list)
 	{
         $highestValue = null;
 
@@ -13,6 +13,6 @@ class HoogsteMemUse
 			}
 		}
 
-		echo sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $highestValue[0], $highestValue[1], $highestValue[2]) . PHP_EOL;
+		return sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $highestValue[0], $highestValue[1], $highestValue[2]);
 	}
 }

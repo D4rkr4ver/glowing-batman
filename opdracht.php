@@ -15,21 +15,23 @@ require_once('MeerDanLaadTijd.php');
 require_once('HoogsteMemUse.php');
 
 $list = array(
-  array( 0.2, 500, 'routeA' ),
-  array( 0.4, 300, 'routeA' ),
-  array( 0.5, 3500, 'routeB' ),
-  array( 0.7, 700, 'routeA' ),
-  array( 0.1, 800, 'routeB' ),
-  array( 0.1, 900, 'routeA' ),
-  array( 0.1, 100, 'routeB' ),
-  array( 0.05, 250, 'routeC' ),
-  array( 1.2, 400, 'routeA' ),
+    array(0.2, 500, 'routeA'),
+    array(0.4, 300, 'routeA'),
+    array(0.5, 3500, 'routeB'),
+    array(0.7, 700, 'routeA'),
+    array(0.1, 800, 'routeB'),
+    array(0.1, 900, 'routeA'),
+    array(0.1, 100, 'routeB'),
+    array(0.05, 250, 'routeC'),
+    array(1.2, 400, 'routeA'),
 );
 
-$avgLaadTijd = new AvgLaadTijd($list, 1000);
-$meerDanLaadTijd = new MeerDanLaadTijd($list, 0.5);
-$hoogsteMemUse = new HoogsteMemUse($list);
+$avgLaadTijd = new AvgLaadTijd();
+$meerDanLaadTijd = new MeerDanLaadTijd();
+$hoogsteMemUse = new HoogsteMemUse();
 
-print_r($avgLaadTijd);
-var_dump($meerDanLaadTijd);
-var_dump($hoogsteMemUse);
+print_r(array(
+    $avgLaadTijd->avgLaadTijd1($list, 1000, true),
+    $meerDanLaadTijd->meerDanLaadTijd1($list, 0.5),
+    $hoogsteMemUse->hoogsteMemUse1($list),
+));

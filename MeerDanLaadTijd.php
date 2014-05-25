@@ -2,7 +2,7 @@
 
 class MeerDanLaadTijd
 {
-	public function meerDanLaadTijd($list, $tijd)
+	public function meerDanLaadTijd1($list, $tijd)
 	{
         $meerDanLaadTijd = 0;
 
@@ -12,6 +12,6 @@ class MeerDanLaadTijd
 			}
 		}
 
-		echo sprintf('%s requests hebben meer dan %s laadtijd nodig', $meerDanLaadTijd, $tijd) . PHP_EOL;
+		return sprintf('%s requests hebben meer dan %s laadtijd nodig', $meerDanLaadTijd, $tijd);
 	}
 }
