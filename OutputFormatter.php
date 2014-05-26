@@ -2,6 +2,11 @@
 
 class OutputFormatter
 {
+    /**
+     * Outputs results to plain text
+     *
+     * @param $object
+     */
     public function toText($object)
     {
         $class = get_class($object);
@@ -24,6 +29,11 @@ class OutputFormatter
         }
     }
 
+    /**
+     * Outputs results to HTML
+     *
+     * @param $object
+     */
     public function toHtml($object)
     {
         $class = get_class($object);
