@@ -7,7 +7,7 @@ class TextFormatter
      *
      * @param $object
      */
-    public function toText($object)
+    public function output($object)
     {
         $class = get_class($object);
 

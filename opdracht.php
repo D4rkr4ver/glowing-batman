@@ -42,13 +42,6 @@ $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
 $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
-if (isset($argv[1]) === true) {
-    $outputFormatter->toHtml($avgLaadTijd);
-    $outputFormatter->toHtml($meerDanLaadTijd);
-    $outputFormatter->toHtml($hoogsteMemUse);
-
-} else {
-    $outputFormatter->toText($avgLaadTijd);
-    $outputFormatter->toText($meerDanLaadTijd);
-    $outputFormatter->toText($hoogsteMemUse);
-}
+$outputFormatter->output($avgLaadTijd);
+$outputFormatter->output($meerDanLaadTijd);
+$outputFormatter->output($hoogsteMemUse);

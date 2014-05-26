@@ -7,7 +7,7 @@ class HtmlFormatter
      *
      * @param $object
      */
-    public function toHtml($object)
+    public function output($object)
     {
         $class = get_class($object);
 
