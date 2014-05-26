@@ -13,6 +13,7 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 require_once('AvgLaadTijd.php');
 require_once('MeerDanLaadTijd.php');
 require_once('HoogsteMemUse.php');
+require_once('HtmlFormatter.php');
 
 $list = array(
     array(0.2, 500, 'routeA'),
@@ -25,6 +26,8 @@ $list = array(
     array(0.05, 250, 'routeC'),
     array(1.2, 400, 'routeA'),
 );
+
+$htmlFormatter = new HtmlFormatter();
 
 $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
@@ -43,3 +46,5 @@ print_r(array(
     sprintf('%s requests hebben meer dan %s laadtijd nodig', $meerDanLaadTijdUitkomst['aantal'], $meerDanLaadTijdUitkomst['laadtijd']),
     sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $hoogsteMemUseUitkomst['laadtijd'], $hoogsteMemUseUitkomst['geheugen'], $hoogsteMemUseUitkomst['route']),
 ));
+$htmlFormatter->toHtml($avgLaadTijd);
+print_r($htmlFormatter->getHtml());
