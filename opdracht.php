@@ -28,8 +28,11 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
-$htmlFormatter = new HtmlFormatter();
-$textFormatter = new TextFormatter();
+if (isset($argv[1]) == '--toHtml') {
+    $htmlFormatter = new HtmlFormatter();
+} else {
+    $textFormatter = new TextFormatter();
+}
 
 $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
