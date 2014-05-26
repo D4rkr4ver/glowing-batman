@@ -13,7 +13,8 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 require_once('AvgLaadTijd.php');
 require_once('MeerDanLaadTijd.php');
 require_once('HoogsteMemUse.php');
-require_once('OutputFormatter.php');
+require_once('HtmlFormatter.php');
+require_once('TextFormatter.php');
 
 $list = array(
     array(0.2, 500, 'routeA'),
@@ -27,7 +28,8 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
-$outputFormatter = new OutputFormatter();
+$htmlFormatter = new HtmlFormatter();
+$textFormatter = new TextFormatter();
 
 $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
@@ -37,13 +39,13 @@ $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
 $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
-if (isset($argv[1]) === '--toHtml') {
-    $outputFormatter->toHtml($avgLaadTijd);
-    $outputFormatter->toHtml($meerDanLaadTijd);
-    $outputFormatter->toHtml($hoogsteMemUse);
+if (isset($argv[1]) == '--toHtml') {
+    $htmlFormatter->toHtml($avgLaadTijd);
+    $htmlFormatter->toHtml($meerDanLaadTijd);
+    $htmlFormatter->toHtml($hoogsteMemUse);
 
 } else {
-    $outputFormatter->toText($avgLaadTijd);
-    $outputFormatter->toText($meerDanLaadTijd);
-    $outputFormatter->toText($hoogsteMemUse);
+    $textFormatter->toText($avgLaadTijd);
+    $textFormatter->toText($meerDanLaadTijd);
+    $textFormatter->toText($hoogsteMemUse);
 }
