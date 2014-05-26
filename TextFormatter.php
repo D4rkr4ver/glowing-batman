@@ -1,6 +1,6 @@
 <?php
 
-class TextFormatter
+class TextFormatter implements OutputFormatter
 {
     /**
      * Outputs results to plain text

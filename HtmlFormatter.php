@@ -1,6 +1,6 @@
 <?php
 
-class HtmlFormatter
+class HtmlFormatter implements OutputFormatter
 {
     /**
      * Outputs results to HTML

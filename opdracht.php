@@ -13,6 +13,7 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 require_once('AvgLaadTijd.php');
 require_once('MeerDanLaadTijd.php');
 require_once('HoogsteMemUse.php');
+require_once('OutputFormatter.php');
 require_once('HtmlFormatter.php');
 require_once('TextFormatter.php');
 
