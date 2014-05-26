@@ -13,7 +13,7 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 require_once('AvgLaadTijd.php');
 require_once('MeerDanLaadTijd.php');
 require_once('HoogsteMemUse.php');
-require_once('HtmlFormatter.php');
+require_once('OutputFormatter.php');
 
 $list = array(
     array(0.2, 500, 'routeA'),
@@ -27,7 +27,7 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
-$htmlFormatter = new HtmlFormatter();
+$outputFormatter = new OutputFormatter();
 
 $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
@@ -37,14 +37,13 @@ $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
 $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
-$avgLaadTijdUitkomst = $avgLaadTijd->getAvgLaadTijd();
-$meerDanLaadTijdUitkomst = $meerDanLaadTijd->getMeerDanLaadTijd();
-$hoogsteMemUseUitkomst = $hoogsteMemUse->getHoogsteMemUse();
+if (isset($argv[1]) === '--toHtml') {
+    $outputFormatter->toHtml($avgLaadTijd);
+    $outputFormatter->toHtml($meerDanLaadTijd);
+    $outputFormatter->toHtml($hoogsteMemUse);
 
-print_r(array(
-    sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $avgLaadTijdUitkomst['geheugen'], $avgLaadTijdUitkomst['laadtijd'] / $avgLaadTijdUitkomst['aantal']),
-    sprintf('%s requests hebben meer dan %s laadtijd nodig', $meerDanLaadTijdUitkomst['aantal'], $meerDanLaadTijdUitkomst['laadtijd']),
-    sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $hoogsteMemUseUitkomst['laadtijd'], $hoogsteMemUseUitkomst['geheugen'], $hoogsteMemUseUitkomst['route']),
-));
-$htmlFormatter->toHtml($avgLaadTijd);
-print_r($htmlFormatter->getHtml());
+} else {
+    $outputFormatter->toText($avgLaadTijd);
+    $outputFormatter->toText($meerDanLaadTijd);
+    $outputFormatter->toText($hoogsteMemUse);
+}
