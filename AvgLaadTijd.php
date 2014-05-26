@@ -2,9 +2,9 @@
 
 class AvgLaadTijd
 {
-	{
-		$count = 0;
     public function avgLaadTijd1($list, $memUsage)
+	{
+        $count = 0;
         $avgLaadTijd = 0;
 
 		foreach ($list as $value) {
@@ -14,7 +14,6 @@ class AvgLaadTijd
 			}
 		}
 
-        echo sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $memUsage, $avgLaadTijd / $count) . PHP_EOL;
-	}
         return sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $memUsage, $avgLaadTijd / $count) . PHP_EOL;
+	}
 }
