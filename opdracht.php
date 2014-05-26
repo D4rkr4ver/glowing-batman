@@ -29,9 +29,9 @@ $list = array(
 );
 
 if (isset($argv[1]) == '--toHtml') {
-    $htmlFormatter = new HtmlFormatter();
+    $outputFormatter = new HtmlFormatter();
 } else {
-    $textFormatter = new TextFormatter();
+    $outputFormatter = new TextFormatter();
 }
 
 $avgLaadTijd = new AvgLaadTijd();
@@ -43,12 +43,12 @@ $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
 if (isset($argv[1]) == '--toHtml') {
-    $htmlFormatter->toHtml($avgLaadTijd);
-    $htmlFormatter->toHtml($meerDanLaadTijd);
-    $htmlFormatter->toHtml($hoogsteMemUse);
+    $outputFormatter->toHtml($avgLaadTijd);
+    $outputFormatter->toHtml($meerDanLaadTijd);
+    $outputFormatter->toHtml($hoogsteMemUse);
 
 } else {
-    $textFormatter->toText($avgLaadTijd);
-    $textFormatter->toText($meerDanLaadTijd);
-    $textFormatter->toText($hoogsteMemUse);
+    $outputFormatter->toText($avgLaadTijd);
+    $outputFormatter->toText($meerDanLaadTijd);
+    $outputFormatter->toText($hoogsteMemUse);
 }
