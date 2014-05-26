@@ -4,7 +4,13 @@ class MeerDanLaadTijd
 {
     private $meerDanLaadTijd = array();
 
-    public function calculateMeerDanLaadTijd($list, $tijd)
+    /**
+     * Berekent het aantal requests die meer dan $tijd load tijd hebben
+     *
+     * @param array $list
+     * @param double $tijd
+     */
+    public function calculateMeerDanLaadTijd(array $list, $tijd)
     {
         $meerDanLaadTijd = 0;
 

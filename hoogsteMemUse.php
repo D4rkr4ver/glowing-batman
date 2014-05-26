@@ -4,7 +4,12 @@ class HoogsteMemUse
 {
     private $highestValue = array();
 
-    public function calculateHoogsteMemUse($list)
+    /**
+     * Berekent de tijd, geheugen en route van het single request met de hoogste memory use
+     *
+     * @param array $list
+     */
+    public function calculateHoogsteMemUse(array $list)
     {
         $highestValue = null;
 
