@@ -2,19 +2,26 @@
 
 class MeerDanLaadTijd
 {
-	public function meerDanLaadTijd1($list, $tijd)
-	{
+    private $meerDanLaadTijd = array();
+
+    public function calculateMeerDanLaadTijd1($list, $tijd)
+    {
         $meerDanLaadTijd = 0;
 
-		foreach ($list as $value) {
-			if ($value[0] > $tijd) {
-				$meerDanLaadTijd++;
-			}
-		}
+        foreach ($list as $value) {
+            if ($value[0] > $tijd) {
+                $meerDanLaadTijd++;
+            }
+        }
 
-        return array(
+        $this->meerDanLaadTijd = array(
             'aantal' => $meerDanLaadTijd,
             'laadtijd' => $tijd,
         );
-	}
+    }
+
+    public function getMeerDanLaadTijd()
+    {
+        return $this->meerDanLaadTijd;
+    }
 }

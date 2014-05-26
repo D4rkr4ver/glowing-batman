@@ -2,8 +2,9 @@
 
 class HoogsteMemUse
 {
+    private $highestValue = array();
 
-    public function hoogsteMemUse1($list)
+    public function calculateHoogsteMemUse($list)
     {
         $highestValue = null;
 
@@ -13,10 +14,15 @@ class HoogsteMemUse
             }
         }
 
-        return array(
+        $this->highestValue = array(
             'laadtijd' => $highestValue[0],
             'geheugen' => $highestValue[1],
             'route' => $highestValue[2],
         );
+    }
+
+    public function getHoogsteMemUse()
+    {
+        return $this->highestValue;
     }
 }

@@ -30,9 +30,13 @@ $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
 $hoogsteMemUse = new HoogsteMemUse();
 
-$avgLaadTijdUitkomst = $avgLaadTijd->avgLaadTijd1($list, 1000);
-$meerDanLaadTijdUitkomst = $meerDanLaadTijd->meerDanLaadTijd1($list, 0.5);
-$hoogsteMemUseUitkomst = $hoogsteMemUse->hoogsteMemUse1($list);
+$avgLaadTijd->calculateAvgLaadTijd($list, 1000);
+$meerDanLaadTijd->calculateMeerDanLaadTijd1($list, 0.5);
+$hoogsteMemUse->calculateHoogsteMemUse($list);
+
+$avgLaadTijdUitkomst = $avgLaadTijd->getAvgLaadTijd();
+$meerDanLaadTijdUitkomst = $meerDanLaadTijd->getMeerDanLaadTijd();
+$hoogsteMemUseUitkomst = $hoogsteMemUse->getHoogsteMemUse();
 
 print_r(array(
     sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $avgLaadTijdUitkomst['geheugen'], $avgLaadTijdUitkomst['laadtijd'] / $avgLaadTijdUitkomst['aantal']),
