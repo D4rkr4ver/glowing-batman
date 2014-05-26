@@ -28,7 +28,7 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
-if (isset($argv[1]) == '--toHtml') {
+if (isset($argv[1]) === true) {
     $outputFormatter = new HtmlFormatter();
 } else {
     $outputFormatter = new TextFormatter();
@@ -42,7 +42,7 @@ $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
 $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
-if (isset($argv[1]) == '--toHtml') {
+if (isset($argv[1]) === true) {
     $outputFormatter->toHtml($avgLaadTijd);
     $outputFormatter->toHtml($meerDanLaadTijd);
     $outputFormatter->toHtml($hoogsteMemUse);
