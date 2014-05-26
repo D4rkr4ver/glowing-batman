@@ -4,7 +4,7 @@ class MeerDanLaadTijd
 {
     private $meerDanLaadTijd = array();
 
-    public function calculateMeerDanLaadTijd1($list, $tijd)
+    public function calculateMeerDanLaadTijd($list, $tijd)
     {
         $meerDanLaadTijd = 0;
 

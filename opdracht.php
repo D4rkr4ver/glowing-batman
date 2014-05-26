@@ -31,7 +31,7 @@ $meerDanLaadTijd = new MeerDanLaadTijd();
 $hoogsteMemUse = new HoogsteMemUse();
 
 $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
-$meerDanLaadTijd->calculateMeerDanLaadTijd1($list, 0.5);
+$meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
 $avgLaadTijdUitkomst = $avgLaadTijd->getAvgLaadTijd();
