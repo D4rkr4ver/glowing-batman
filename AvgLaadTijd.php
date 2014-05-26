@@ -14,6 +14,10 @@ class AvgLaadTijd
 			}
 		}
 
-        return sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $memUsage, $avgLaadTijd / $count) . PHP_EOL;
+        return array(
+            'geheugen' => $memUsage,
+            'aantal' => $count,
+            'laadtijd' => $avgLaadTijd,
+        );
 	}
 }

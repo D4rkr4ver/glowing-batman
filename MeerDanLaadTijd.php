@@ -12,6 +12,9 @@ class MeerDanLaadTijd
 			}
 		}
 
-		return sprintf('%s requests hebben meer dan %s laadtijd nodig', $meerDanLaadTijd, $tijd);
+        return array(
+            'aantal' => $meerDanLaadTijd,
+            'laadtijd' => $tijd,
+        );
 	}
 }

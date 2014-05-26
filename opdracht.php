@@ -30,8 +30,12 @@ $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
 $hoogsteMemUse = new HoogsteMemUse();
 
+$avgLaadTijdUitkomst = $avgLaadTijd->avgLaadTijd1($list, 1000);
+$meerDanLaadTijdUitkomst = $meerDanLaadTijd->meerDanLaadTijd1($list, 0.5);
+$hoogsteMemUseUitkomst = $hoogsteMemUse->hoogsteMemUse1($list);
+
 print_r(array(
-    $avgLaadTijd->avgLaadTijd1($list, 1000, true),
-    $meerDanLaadTijd->meerDanLaadTijd1($list, 0.5),
-    $hoogsteMemUse->hoogsteMemUse1($list),
+    sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $avgLaadTijdUitkomst['geheugen'], $avgLaadTijdUitkomst['laadtijd'] / $avgLaadTijdUitkomst['aantal']),
+    sprintf('%s requests hebben meer dan %s laadtijd nodig', $meerDanLaadTijdUitkomst['aantal'], $meerDanLaadTijdUitkomst['laadtijd']),
+    sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $hoogsteMemUseUitkomst['laadtijd'], $hoogsteMemUseUitkomst['geheugen'], $hoogsteMemUseUitkomst['route']),
 ));
