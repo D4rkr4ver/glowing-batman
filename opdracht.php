@@ -22,6 +22,7 @@ require_once('AvgLaadTijdTextFormatter.php');
 require_once('HoogsteMemUseTextFormatter.php');
 require_once('MeerDanLaadTijdTextFormatter.php');
 require_once('TextFormatter.php');
+require_once('UpperCase.php');
 
 $list = array(
     array(0.2, 500, 'routeA'),
@@ -45,11 +46,14 @@ if (isset($argv[1]) === true) {
 $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
 $hoogsteMemUse = new HoogsteMemUse();
+$upperCase = new UpperCase();
 
 $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
 $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
 $hoogsteMemUse->calculateHoogsteMemUse($list);
 
-$outputFormatter->output($avgLaadTijd);
-$outputFormatter->output($meerDanLaadTijd);
-$outputFormatter->output($hoogsteMemUse);
+echo $outputFormatter->output($avgLaadTijd) . PHP_EOL;
+echo $outputFormatter->output($meerDanLaadTijd) . PHP_EOL;
+echo $outputFormatter->output($hoogsteMemUse) . PHP_EOL;
+
+$upperCase->match($avgLaadTijd, 0.1);
