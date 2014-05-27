@@ -10,19 +10,19 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 - route naam en totaal time, mem_use van de route die overall de meeste time gebruikt heeft
 */
 
-require_once('AvgLaadTijd.php');
-require_once('MeerDanLaadTijd.php');
-require_once('HoogsteMemUse.php');
-require_once('OutputFormatter.php');
-require_once('AvgLaadTijdHtmlFormatter.php');
-require_once('HoogsteMemUseHtmlFormatter.php');
-require_once('MeerDanLaadTijdHtmlFormatter.php');
-require_once('HtmlFormatter.php');
-require_once('AvgLaadTijdTextFormatter.php');
-require_once('HoogsteMemUseTextFormatter.php');
-require_once('MeerDanLaadTijdTextFormatter.php');
-require_once('TextFormatter.php');
-require_once('UpperCase.php');
+require_once('Controllers/AvgLaadTijd.php');
+require_once('Controllers/MeerDanLaadTijd.php');
+require_once('Controllers/HoogsteMemUse.php');
+require_once('Output/OutputFormatter.php');
+require_once('Output/Html/AvgLaadTijdHtmlFormatter.php');
+require_once('Output/Html/HoogsteMemUseHtmlFormatter.php');
+require_once('Output/Html/MeerDanLaadTijdHtmlFormatter.php');
+require_once('Output/Html/HtmlFormatter.php');
+require_once('Output/Text/AvgLaadTijdTextFormatter.php');
+require_once('Output/Text/HoogsteMemUseTextFormatter.php');
+require_once('Output/Text/MeerDanLaadTijdTextFormatter.php');
+require_once('Output/Text/TextFormatter.php');
+require_once('Output/UpperCase.php');
 
 $list = array(
     array(0.2, 500, 'routeA'),

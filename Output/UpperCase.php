@@ -19,7 +19,7 @@ class UpperCase implements OutputFormatter
     public function match($object, $value)
     {
         if ($object->getAvgLaadTijd()['laadtijd'] > $value) {
-            
+
         }
     }
 }
