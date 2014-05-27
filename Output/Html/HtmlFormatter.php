@@ -26,4 +26,13 @@ class HtmlFormatter implements OutputFormatter
             }
         };
     }
+
+    public function match($object)
+    {
+        foreach ($this->classes as $class) {
+            if ($class->match($object) === true) {
+                return true;
+            }
+        }
+    }
 }

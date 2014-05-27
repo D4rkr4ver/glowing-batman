@@ -46,7 +46,6 @@ if (isset($argv[1]) === true) {
 $avgLaadTijd = new AvgLaadTijd();
 $meerDanLaadTijd = new MeerDanLaadTijd();
 $hoogsteMemUse = new HoogsteMemUse();
-$upperCase = new UpperCase();
 
 $avgLaadTijd->calculateAvgLaadTijd($list, 1000);
 $meerDanLaadTijd->calculateMeerDanLaadTijd($list, 0.5);
@@ -55,5 +54,3 @@ $hoogsteMemUse->calculateHoogsteMemUse($list);
 echo $outputFormatter->output($avgLaadTijd) . PHP_EOL;
 echo $outputFormatter->output($meerDanLaadTijd) . PHP_EOL;
 echo $outputFormatter->output($hoogsteMemUse) . PHP_EOL;
-
-$upperCase->match($avgLaadTijd, 0.1);
