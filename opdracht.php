@@ -14,7 +14,13 @@ require_once('AvgLaadTijd.php');
 require_once('MeerDanLaadTijd.php');
 require_once('HoogsteMemUse.php');
 require_once('OutputFormatter.php');
+require_once('AvgLaadTijdHtmlFormatter.php');
+require_once('HoogsteMemUseHtmlFormatter.php');
+require_once('MeerDanLaadTijdHtmlFormatter.php');
 require_once('HtmlFormatter.php');
+require_once('AvgLaadTijdTextFormatter.php');
+require_once('HoogsteMemUseTextFormatter.php');
+require_once('MeerDanLaadTijdTextFormatter.php');
 require_once('TextFormatter.php');
 
 $list = array(
@@ -29,6 +35,7 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
+// TODO: check if arg is called 'html'
 if (isset($argv[1]) === true) {
     $outputFormatter = new HtmlFormatter();
 } else {
