@@ -7,9 +7,10 @@ class TextFormatter implements OutputFormatter
     public function __construct()
     {
         $this->classes = array(
-            new AvgLaadTijdTextFormatter(),
-            new HoogsteMemUseTextFormatter(),
-            new MeerDanLaadTijdTextFormatter(),
+            new AvgLoadTimeTextFormatter(),
+            new HighestMemUseTextFormatter(),
+            new MoreThanLoadTimeTextFormatter(),
+            new UpperCase(new AvgLoadTimeTextFormatter()),
         );
     }
 

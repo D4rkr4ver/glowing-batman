@@ -1,15 +1,15 @@
 <?php
 
-class HoogsteMemUse
+class HighestMemUse
 {
     private $highestValue = array();
 
     /**
-     * Berekent de tijd, geheugen en route van het single request met de hoogste memory use
+     * Calculates time, memory and route of the single request with the highest memory usage
      *
      * @param array $list
      */
-    public function calculateHoogsteMemUse(array $list)
+    public function calculateHighestMemUse(array $list)
     {
         $highestValue = null;
 
@@ -20,13 +20,13 @@ class HoogsteMemUse
         }
 
         $this->highestValue = array(
-            'laadtijd' => $highestValue[0],
-            'geheugen' => $highestValue[1],
+            'loadtime' => $highestValue[0],
+            'memory' => $highestValue[1],
             'route' => $highestValue[2],
         );
     }
 
-    public function getHoogsteMemUse()
+    public function getHighestMemUse()
     {
         return $this->highestValue;
     }

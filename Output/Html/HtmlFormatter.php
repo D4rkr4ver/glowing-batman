@@ -7,9 +7,10 @@ class HtmlFormatter implements OutputFormatter
     public function __construct()
     {
         $this->classes = array(
-            new AvgLaadTijdHtmlFormatter(),
-            new HoogsteMemUseHtmlFormatter(),
-            new MeerDanLaadTijdHtmlFormatter(),
+            new AvgLoadTimeHtmlFormatter(),
+            new HighestMemUseHtmlFormatter(),
+            new MoreThanLoadTimeHtmlFormatter(),
+            new UpperCase(new AvgLoadTimeHtmlFormatter()),
         );
     }
 
