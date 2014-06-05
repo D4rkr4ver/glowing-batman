@@ -1,5 +1,7 @@
 <?php
 
+namespace Randy\Controllers;
+
 class AvgLoadTime
 {
     private $avgLoadTime = array();

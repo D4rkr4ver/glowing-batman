@@ -1,7 +1,17 @@
 <?php
 
+namespace Randy\Output;
+
 class UpperCase implements OutputFormatter
 {
+
+    public $formatter = null;
+
+    public function __construct(OutputFormatter $formatter)
+    {
+        $this->formatter = $formatter;
+    }
+
     /**
      * Outputs results to uppercase
      *
@@ -9,17 +19,13 @@ class UpperCase implements OutputFormatter
      */
     public function output($object)
     {
-        foreach ($this->classes as $class) {
-            if ($class->match($object) === true) {
-                return $class->output($object);
-            }
-        };
+
     }
 
-    public function match($object, $value)
+    public function match($object)
     {
-        if ($object->getAvgLaadTijd()['laadtijd'] > $value) {
-
+        if ($this->formatter->getAvgLoadTime()['laadtijd'] > $value) {
+            echo 'blabla';
         }
     }
 }

@@ -1,0 +1,12 @@
+{
+    "name": "Randy/glowing-batman",
+    "description": "Test project to develop OoP skills",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Randy Geraads",
+            "email": "r.geraads@gmail.com"
+        }
+    ]
+}

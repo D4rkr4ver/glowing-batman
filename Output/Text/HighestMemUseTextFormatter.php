@@ -1,5 +1,9 @@
 <?php
 
+namespace Randy\Output\Text;
+
+use Randy\Output\OutputFormatter;
+
 class HighestMemUseTextFormatter implements OutputFormatter
 {
     /**

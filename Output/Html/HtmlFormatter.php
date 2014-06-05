@@ -1,5 +1,10 @@
 <?php
 
+namespace Randy\Output\Html;
+
+use Randy\Output\OutputFormatter;
+use Randy\Output\UpperCase;
+
 class HtmlFormatter implements OutputFormatter
 {
     public $classes = array();

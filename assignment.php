@@ -1,5 +1,11 @@
 <?php
 
+use Randy\Controllers\AvgLoadTime;
+use Randy\Controllers\MoreThanLoadTime;
+use Randy\Controllers\HighestMemUse;
+use Randy\Output\Html\HtmlFormatter;
+use Randy\Output\Text\TextFormatter;
+
 /*
 gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugengebruik (int), route (string) ), lees de hele lijst door en bereken de volgende business requirements:
 
@@ -9,20 +15,6 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 * time, mem_use, route van het single request met de hoogste memory use
 - route naam en totaal time, mem_use van de route die overall de meeste time gebruikt heeft
 */
-
-require_once('Controllers/AvgLoadTime.php');
-require_once('Controllers/MoreThanLoadTime.php');
-require_once('Controllers/HighestMemUse.php');
-require_once('Output/OutputFormatter.php');
-require_once('Output/Html/AvgLoadTimeHtmlFormatter.php');
-require_once('Output/Html/HighestMemUseHtmlFormatter.php');
-require_once('Output/Html/MoreThanLoadTimeHtmlFormatter.php');
-require_once('Output/Html/HtmlFormatter.php');
-require_once('Output/Text/AvgLoadTimeTextFormatter.php');
-require_once('Output/Text/HighestMemUseTextFormatter.php');
-require_once('Output/Text/MoreThanLoadTimeTextFormatter.php');
-require_once('Output/Text/TextFormatter.php');
-require_once('Output/UpperCase.php');
 
 $list = array(
     array(0.2, 500, 'routeA'),
@@ -36,8 +28,7 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
-// TODO: check if arg is called 'html'
-if (isset($argv[1]) === true) {
+if ($argv[1] === '--html') {
     $outputFormatter = new HtmlFormatter();
 } else {
     $outputFormatter = new TextFormatter();

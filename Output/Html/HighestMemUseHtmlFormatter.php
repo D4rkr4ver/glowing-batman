@@ -1,5 +1,9 @@
 <?php
 
+namespace Randy\Output\Html;
+
+use Randy\Output\OutputFormatter;
+
 class HighestMemUseHtmlFormatter implements OutputFormatter
 {
     /**

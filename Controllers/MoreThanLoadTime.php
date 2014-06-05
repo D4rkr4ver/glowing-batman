@@ -1,5 +1,7 @@
 <?php
 
+namespace Randy\Controllers;
+
 class MoreThanLoadTime
 {
     private $moreThanLoadTime = array();

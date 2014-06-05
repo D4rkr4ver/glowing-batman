@@ -1,5 +1,8 @@
 <?php
 
+namespace Randy\Output;
+
+
 interface OutputFormatter
 {
     public function output($object);
