@@ -19,6 +19,6 @@ class MoreThanLoadTimeTextFormatter implements OutputFormatter
 
     public function match($object)
     {
-        return get_class($object) === 'MoreThanLoadTime';
+        return get_class($object) === 'Controllers\MoreThanLoadTime';
     }
 }

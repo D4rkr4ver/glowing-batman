@@ -21,6 +21,6 @@ class AvgLoadTimeHtmlFormatter implements OutputFormatter
 
     public function match($object)
     {
-        return get_class($object) === 'AvgLoadTime';
+        return get_class($object) === 'Controllers\AvgLoadTime';
     }
 }

@@ -27,7 +27,6 @@ class UpperCase implements OutputFormatter
 
     public function match($object)
     {
-        var_dump($object);
-        var_dump(get_class($object) === 'AvgLoadTime');
+        return get_class($object) === 'Controller\AvgLoadTime';
     }
 }

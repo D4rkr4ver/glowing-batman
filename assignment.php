@@ -18,6 +18,20 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 - route naam en totaal time, mem_use van de route die overall de meeste time gebruikt heeft
 */
 
+require_once('Controllers/AvgLoadTime.php');
+require_once('Controllers/MoreThanLoadTime.php');
+require_once('Controllers/HighestMemUse.php');
+require_once('Output/OutputFormatter.php');
+require_once('Output/Html/AvgLoadTimeHtmlFormatter.php');
+require_once('Output/Html/HighestMemUseHtmlFormatter.php');
+require_once('Output/Html/MoreThanLoadTimeHtmlFormatter.php');
+require_once('Output/Html/HtmlFormatter.php');
+require_once('Output/Text/AvgLoadTimeTextFormatter.php');
+require_once('Output/Text/HighestMemUseTextFormatter.php');
+require_once('Output/Text/MoreThanLoadTimeTextFormatter.php');
+require_once('Output/Text/TextFormatter.php');
+require_once('Output/UpperCase.php');
+
 $list = array(
     array(0.2, 500, 'routeA'),
     array(0.4, 300, 'routeA'),
