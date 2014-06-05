@@ -1,8 +1,8 @@
 <?php
 
-namespace Randy\Output\Text;
+namespace Output\Text;
 
-use Randy\Output\OutputFormatter;
+use Output\OutputFormatter;
 
 class AvgLoadTimeTextFormatter implements OutputFormatter
 {

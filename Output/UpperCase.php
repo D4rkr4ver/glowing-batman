@@ -1,6 +1,6 @@
 <?php
 
-namespace Randy\Output;
+namespace Output;
 
 class UpperCase implements OutputFormatter
 {
@@ -19,13 +19,15 @@ class UpperCase implements OutputFormatter
      */
     public function output($object)
     {
-
+        $array = $object->getAvgLoadTime();
+        if ($array['loadtime'] > $value) {
+            echo 'blabla';
+        }
     }
 
     public function match($object)
     {
-        if ($this->formatter->getAvgLoadTime()['laadtijd'] > $value) {
-            echo 'blabla';
-        }
+        var_dump($object);
+        var_dump(get_class($object) === 'AvgLoadTime');
     }
 }

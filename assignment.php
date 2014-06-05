@@ -1,10 +1,12 @@
 <?php
 
-use Randy\Controllers\AvgLoadTime;
-use Randy\Controllers\MoreThanLoadTime;
-use Randy\Controllers\HighestMemUse;
-use Randy\Output\Html\HtmlFormatter;
-use Randy\Output\Text\TextFormatter;
+require_once(__DIR__ . '/vendor/autoload.php');
+
+use Controllers\AvgLoadTime;
+use Controllers\MoreThanLoadTime;
+use Controllers\HighestMemUse;
+use Output\Html\HtmlFormatter;
+use Output\Text\TextFormatter;
 
 /*
 gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugengebruik (int), route (string) ), lees de hele lijst door en bereken de volgende business requirements:

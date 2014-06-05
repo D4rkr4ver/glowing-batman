@@ -1,6 +1,6 @@
 <?php
 
-namespace Randy\Output;
+namespace Output;
 
 
 interface OutputFormatter

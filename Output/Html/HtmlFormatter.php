@@ -1,9 +1,9 @@
 <?php
 
-namespace Randy\Output\Html;
+namespace Output\Html;
 
-use Randy\Output\OutputFormatter;
-use Randy\Output\UpperCase;
+use Output\OutputFormatter;
+use Output\UpperCase;
 
 class HtmlFormatter implements OutputFormatter
 {

@@ -1,15 +1,16 @@
 <?php
 
-namespace Randy\Output\Html;
+namespace Output\Html;
 
-use Randy\Output\OutputFormatter;
+use Output\OutputFormatter;
+use Controllers\AvgLoadTime;
 
 class AvgLoadTimeHtmlFormatter implements OutputFormatter
 {
     /**
      * Outputs results to HTML
      *
-     * @param $object
+     * @param AvgLoadTime $object
      */
     public function output($object)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Randy\Controllers;
+namespace Controllers;
 
 class MostCalledRoute
 {
