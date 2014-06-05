@@ -44,7 +44,7 @@ $list = array(
     array(1.2, 400, 'routeA'),
 );
 
-if ($argv[1] === '--html') {
+if (isset($argv[1]) && $argv[1] === '--html') {
     $outputFormatter = new HtmlFormatter();
 } else {
     $outputFormatter = new TextFormatter();
