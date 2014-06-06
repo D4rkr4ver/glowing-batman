@@ -15,6 +15,7 @@ class HtmlFormatter implements OutputFormatter
             new AvgLoadTimeHtmlFormatter(),
             new HighestMemUseHtmlFormatter(),
             new MoreThanLoadTimeHtmlFormatter(),
+            new MostCalledRouteHtmlFormatter(),
             new UpperCase(new AvgLoadTimeHtmlFormatter()),
         );
     }

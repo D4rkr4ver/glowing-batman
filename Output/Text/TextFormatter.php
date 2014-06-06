@@ -15,6 +15,7 @@ class TextFormatter implements OutputFormatter
             new AvgLoadTimeTextFormatter(),
             new HighestMemUseTextFormatter(),
             new MoreThanLoadTimeTextFormatter(),
+            new MostCalledRouteTextFormatter(),
             new UpperCase(new AvgLoadTimeTextFormatter()),
         );
     }
