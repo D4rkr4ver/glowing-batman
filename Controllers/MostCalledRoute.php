@@ -14,13 +14,26 @@ class MostCalledRoute
     public function calculateMostCalledRoute(array $list)
     {
         $routes = array();
-        foreach($list as $key => $value) {
-            $routes[] = $value[2];
+        $mostCalledRoute = array(
+            'route' => '',
+            'count' => 0,
+        );
+
+        foreach ($list as $key => $value) {
+            if (isset($routes[$value[2]])) {
+                $routes[$value[2]]++;
+            } else {
+                $routes[$value[2]] = 1;
+            }
         }
-        $routes = array_count_values($routes);
-        $mostCalledRoute = array_keys($routes, max($routes));
-        $this->mostCalledRoute['route'] = array_shift($mostCalledRoute);
-        $this->mostCalledRoute['count'] = max(array_values($routes));
+
+        foreach ($routes as $route => $count) {
+            if ($count > $mostCalledRoute['count']) {
+                $mostCalledRoute['route'] = $route;
+                $mostCalledRoute['count'] = $count;
+            }
+        }
+        $this->mostCalledRoute = $mostCalledRoute;
     }
 
     public function getMostCalledRoute()
