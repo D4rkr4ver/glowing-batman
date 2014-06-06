@@ -2,6 +2,8 @@
 
 namespace Output;
 
+use Controllers\AvgLoadTime;
+
 class UpperCase implements OutputFormatter
 {
 
@@ -15,7 +17,7 @@ class UpperCase implements OutputFormatter
     /**
      * Outputs results to uppercase
      *
-     * @param $object
+     * @param AvgLoadTime $object
      */
     public function output($object)
     {

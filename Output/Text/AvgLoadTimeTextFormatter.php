@@ -3,13 +3,14 @@
 namespace Output\Text;
 
 use Output\OutputFormatter;
+use Controllers\AvgLoadTime;
 
 class AvgLoadTimeTextFormatter implements OutputFormatter
 {
     /**
      * Outputs results to plain text
      *
-     * @param $object
+     * @param AvgLoadTime $object
      */
     public function output($object)
     {

@@ -3,13 +3,14 @@
 namespace Output\Html;
 
 use Output\OutputFormatter;
+use Controllers\MoreThanLoadTime;
 
 class MoreThanLoadTimeHtmlFormatter implements OutputFormatter
 {
     /**
      * Outputs results to HTML
      *
-     * @param $object
+     * @param MoreThanLoadTime $object
      */
     public function output($object)
     {

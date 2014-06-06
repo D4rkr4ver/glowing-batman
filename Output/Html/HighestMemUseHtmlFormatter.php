@@ -3,13 +3,14 @@
 namespace Output\Html;
 
 use Output\OutputFormatter;
+use Controllers\HighestMemUse;
 
 class HighestMemUseHtmlFormatter implements OutputFormatter
 {
     /**
      * Outputs results to HTML
      *
-     * @param $object
+     * @param HighestMemUse $object
      */
     public function output($object)
     {

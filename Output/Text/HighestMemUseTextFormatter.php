@@ -3,13 +3,14 @@
 namespace Output\Text;
 
 use Output\OutputFormatter;
+use Controllers\HighestMemUse;
 
 class HighestMemUseTextFormatter implements OutputFormatter
 {
     /**
      * Outputs results to plain text
      *
-     * @param $object
+     * @param HighestMemUse $object
      */
     public function output($object)
     {
