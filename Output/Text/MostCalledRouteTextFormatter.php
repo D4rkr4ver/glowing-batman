@@ -20,6 +20,6 @@ class MostCalledRouteTextFormatter implements OutputFormatter
 
     public function match($object)
     {
-        return get_class($object) === 'Controllers\MostCalledRoute';
+        return $object instanceof MostCalledRoute;
     }
 }
