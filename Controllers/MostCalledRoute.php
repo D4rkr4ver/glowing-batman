@@ -8,7 +8,7 @@ class MostCalledRoute
     public $mostCalledRoute = array();
 
     /**
-     * Calculates the most called route
+     * Calculates all stats for every route by name
      *
      * @param array $list
      */
@@ -26,7 +26,12 @@ class MostCalledRoute
         $this->routeCount = $routes;
     }
 
-    public function calculateMostCalledRoute($list)
+    /**
+     * Calculates the most called route
+     *
+     * @param array $list
+     */
+    public function calculateMostCalledRoute(array $list)
     {
         // TODO: make this independent
         $this->calculateRouteCount($list);
