@@ -6,8 +6,7 @@ use Controllers\AvgLoadTime;
 use Controllers\MoreThanLoadTime;
 use Controllers\HighestMemUse;
 use Controllers\MostCalledRoute;
-use Output\Html\HtmlFormatter;
-use Output\Text\TextFormatter;
+use Output\OutputFormatter;
 
 /*
 gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugengebruik (int), route (string) ), lees de hele lijst door en bereken de volgende business requirements:
@@ -39,38 +38,41 @@ require_once('Output/Text/RouteWithMostTimeTextFormatter.php');
 require_once('Output/Text/TextFormatter.php');
 require_once('Output/UpperCase.php');
 
-$list = array(
-    array(0.2, 500, 'routeA'),
-    array(0.4, 300, 'routeA'),
-    array(0.5, 3500, 'routeB'),
-    array(0.7, 700, 'routeA'),
-    array(0.1, 800, 'routeB'),
-    array(0.1, 900, 'routeA'),
-    array(0.1, 100, 'routeB'),
-    array(0.05, 250, 'routeC'),
-    array(1.2, 400, 'routeA'),
-);
+class Assignment
+{
+    public $outputFormatter;
 
-if (isset($argv[1]) && $argv[1] === '--html') {
-    $outputFormatter = new HtmlFormatter();
-} else {
-    $outputFormatter = new TextFormatter();
+    public function __construct(OutputFormatter $outputFormatter)
+    {
+        $list = array(
+            array(0.2, 500, 'routeA'),
+            array(0.4, 300, 'routeA'),
+            array(0.5, 3500, 'routeB'),
+            array(0.7, 700, 'routeA'),
+            array(0.1, 800, 'routeB'),
+            array(0.1, 900, 'routeA'),
+            array(0.1, 100, 'routeB'),
+            array(0.05, 250, 'routeC'),
+            array(1.2, 400, 'routeA'),
+        );
+
+        $avgLoadTime = new AvgLoadTime();
+        $moreThanLoadTime = new MoreThanLoadTime();
+        $highestMemUse = new HighestMemUse();
+        $mostCalledRoute = new MostCalledRoute();
+        $routeWithMostTime = new \Controllers\RouteWithMostTime();
+
+        $avgLoadTime->calculateAvgLoadTime($list, 1000);
+        $moreThanLoadTime->calculateMoreThanLoadTime($list, 0.5);
+        $highestMemUse->calculateHighestMemUse($list);
+        $mostCalledRoute->calculateMostCalledRoute($list);
+        $routeWithMostTime->calculateRouteWithMostTime($list);
+
+        echo $outputFormatter->output($avgLoadTime) . PHP_EOL;
+        echo $outputFormatter->output($moreThanLoadTime) . PHP_EOL;
+        echo $outputFormatter->output($highestMemUse) . PHP_EOL;
+        echo $outputFormatter->output($mostCalledRoute) . PHP_EOL;
+        echo $outputFormatter->output($routeWithMostTime) . PHP_EOL;
+    }
 }
 
-$avgLoadTime = new AvgLoadTime();
-$moreThanLoadTime = new MoreThanLoadTime();
-$highestMemUse = new HighestMemUse();
-$mostCalledRoute = new MostCalledRoute();
-$routeWithMostTime = new \Controllers\RouteWithMostTime();
-
-$avgLoadTime->calculateAvgLoadTime($list, 1000);
-$moreThanLoadTime->calculateMoreThanLoadTime($list, 0.5);
-$highestMemUse->calculateHighestMemUse($list);
-$mostCalledRoute->calculateMostCalledRoute($list);
-$routeWithMostTime->calculateRouteWithMostTime($list);
-
-echo $outputFormatter->output($avgLoadTime) . PHP_EOL;
-echo $outputFormatter->output($moreThanLoadTime) . PHP_EOL;
-echo $outputFormatter->output($highestMemUse) . PHP_EOL;
-echo $outputFormatter->output($mostCalledRoute) . PHP_EOL;
-echo $outputFormatter->output($routeWithMostTime) . PHP_EOL;
