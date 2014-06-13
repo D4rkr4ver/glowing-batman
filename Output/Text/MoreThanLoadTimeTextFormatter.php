@@ -1,11 +1,16 @@
 <?php
 
+namespace Output\Text;
+
+use Output\OutputFormatter;
+use Controllers\MoreThanLoadTime;
+
 class MoreThanLoadTimeTextFormatter implements OutputFormatter
 {
     /**
      * Outputs results to plain text
      *
-     * @param $object
+     * @param MoreThanLoadTime $object
      */
     public function output($object)
     {
@@ -15,6 +20,6 @@ class MoreThanLoadTimeTextFormatter implements OutputFormatter
 
     public function match($object)
     {
-        return get_class($object) === 'MoreThanLoadTime';
+        return $object instanceof MoreThanLoadTime;
     }
 }

@@ -1,5 +1,10 @@
 <?php
 
+namespace Output\Html;
+
+use Output\OutputFormatter;
+use Output\UpperCase;
+
 class HtmlFormatter implements OutputFormatter
 {
     public $classes = array();
@@ -10,6 +15,8 @@ class HtmlFormatter implements OutputFormatter
             new AvgLoadTimeHtmlFormatter(),
             new HighestMemUseHtmlFormatter(),
             new MoreThanLoadTimeHtmlFormatter(),
+            new MostCalledRouteHtmlFormatter(),
+            new RouteWithMostTimeHtmlFormatter(),
             new UpperCase(new AvgLoadTimeHtmlFormatter()),
         );
     }

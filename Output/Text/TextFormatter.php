@@ -1,5 +1,10 @@
 <?php
 
+namespace Output\Text;
+
+use Output\OutputFormatter;
+use Output\UpperCase;
+
 class TextFormatter implements OutputFormatter
 {
     public $classes = array();
@@ -10,6 +15,8 @@ class TextFormatter implements OutputFormatter
             new AvgLoadTimeTextFormatter(),
             new HighestMemUseTextFormatter(),
             new MoreThanLoadTimeTextFormatter(),
+            new MostCalledRouteTextFormatter(),
+            new RouteWithMostTimeTextFormatter(),
             new UpperCase(new AvgLoadTimeTextFormatter()),
         );
     }

@@ -1,5 +1,7 @@
 <?php
 
+namespace Controllers;
+
 class HighestMemUse
 {
     private $highestValue = array();

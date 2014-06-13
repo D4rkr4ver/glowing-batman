@@ -1,20 +1,29 @@
 <?php
 
+namespace Output\Text;
+
+use Output\OutputFormatter;
+use Controllers\AvgLoadTime;
+
 class AvgLoadTimeTextFormatter implements OutputFormatter
 {
     /**
      * Outputs results to plain text
      *
-     * @param $object
+     * @param AvgLoadTime $object
      */
     public function output($object)
     {
         $array = $object->getAvgLoadTime();
-        echo sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $array['memory'], $array['loadtime'] / $array['count']);
+
+        if ($array['count'] !== 0) {
+            $array['loadtime'] = $array['loadtime'] / $array['count'];
+        }
+        echo sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $array['memory'], $array['loadtime']);
     }
 
     public function match($object)
     {
-        return get_class($object) === 'AvgLoadTime';
+        return $object instanceof AvgLoadTime;
     }
 }

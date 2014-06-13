@@ -1,11 +1,16 @@
 <?php
 
+namespace Output\Text;
+
+use Output\OutputFormatter;
+use Controllers\HighestMemUse;
+
 class HighestMemUseTextFormatter implements OutputFormatter
 {
     /**
      * Outputs results to plain text
      *
-     * @param $object
+     * @param HighestMemUse $object
      */
     public function output($object)
     {
@@ -15,6 +20,6 @@ class HighestMemUseTextFormatter implements OutputFormatter
 
     public function match($object)
     {
-        return get_class($object) === 'HighestMemUse';
+        return $object instanceof HighestMemUse;
     }
 }
