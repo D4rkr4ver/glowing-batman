@@ -15,7 +15,7 @@ class MostCalledRouteHtmlFormatter implements OutputFormatter
     public function output($object)
     {
         $array = $object->getMostCalledRoute();
-        echo sprintf('<p><bold>%s</bold> wordt met <bold>%sx</bold> het vaakst aangeroepen</p>', $array['route'], $array['count']);
+        echo sprintf('<p><b>%s</b> wordt met <b>%sx</b> het vaakst aangeroepen</p>', $array['route'], $array['count']);
     }
 
     public function match($object)
