@@ -6,6 +6,7 @@ use Controllers\AvgLoadTime;
 use Controllers\MoreThanLoadTime;
 use Controllers\HighestMemUse;
 use Controllers\MostCalledRoute;
+use Controllers\RouteWithMostTime;
 use Output\OutputFormatter;
 
 /*
@@ -60,7 +61,7 @@ class Assignment
         $moreThanLoadTime = new MoreThanLoadTime();
         $highestMemUse = new HighestMemUse();
         $mostCalledRoute = new MostCalledRoute();
-        $routeWithMostTime = new \Controllers\RouteWithMostTime();
+        $routeWithMostTime = new RouteWithMostTime();
 
         $avgLoadTime->calculateAvgLoadTime($list, 1000);
         $moreThanLoadTime->calculateMoreThanLoadTime($list, 0.5);
