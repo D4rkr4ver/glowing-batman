@@ -6,7 +6,6 @@ use Controllers\AvgLoadTime;
 
 class UpperCase implements OutputFormatter
 {
-
     public $formatter = null;
 
     public function __construct(OutputFormatter $formatter)
@@ -29,6 +28,6 @@ class UpperCase implements OutputFormatter
 
     public function match($object)
     {
-        return get_class($object) === 'Controller\AvgLoadTime';
+        return $object instanceof AvgLoadTime;
     }
 }
