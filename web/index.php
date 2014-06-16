@@ -9,7 +9,7 @@
 
 use Output\Html\HtmlFormatter;
 
-require_once('../assignment.php');
+require_once(__DIR__ . '/../assignment.php');
 
 $outputFormatter = new Assignment(new HtmlFormatter());
 

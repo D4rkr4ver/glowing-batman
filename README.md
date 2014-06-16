@@ -4,9 +4,14 @@ First test-project. Plain PHP without framework, to get more knowledge of PHP fu
 
 INSTALLATION
 ------------
-- No installation required
+- php composer.phar install (only needed if you want to run testcases)
 
 USAGE
 -----
-- On the command line, call Command/Console.php for plain text
-- In a browser, go to web/index.php for HTML formatted text
+- Command line: call Command/Console.php for plain text
+- Browser: go to web/index.php for HTML formatted text
+- Vagrant: vagrant up, install apache2 + PHP, go to http://localhost:5000 in the browser on your host machine
+
+TESTING
+-------
+- bin/behat via command-line

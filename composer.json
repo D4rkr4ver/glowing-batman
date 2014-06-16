@@ -8,5 +8,12 @@
             "name": "Randy Geraads",
             "email": "r.geraads@gmail.com"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "4.3.*@dev",
+        "behat/behat": "3.0.*@dev"
+    },
+    "config": {
+        "bin-dir": "bin/"
+    }
 }
