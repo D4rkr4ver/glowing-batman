@@ -10,7 +10,7 @@ USAGE
 -----
 - Command line: call Command/Console.php for plain text
 - Browser: go to web/index.php for HTML formatted text
-- Vagrant: vagrant up, install apache2 + PHP, go to http://localhost:5000 in the browser on your host machine
+- Vagrant: vagrant up, wait for it to finish, then go to http://localhost:5000 in the browser on your host machine
 
 TESTING
 -------
@@ -19,6 +19,7 @@ TESTING
 TODO
 ----
 * Autoloader
+* Vagrant provisioning
 - Behat tests for web-interface
 - Commit hooks
 - PHPUnit tests (TDD)
