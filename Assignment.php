@@ -54,4 +54,3 @@ class Assignment
         echo $outputFormatter->output($routeWithMostTime) . PHP_EOL;
     }
 }
-
