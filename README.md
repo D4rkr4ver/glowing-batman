@@ -1,6 +1,6 @@
 README
 ======
-First test-project. Plain PHP without framework, to get more knowledge of PHP functionality. Next project will likely be done in Symfony2.
+First test-project. Plain PHP with Composer, to get more knowledge of PHP functionality. Next project will likely be done in Symfony2.
 
 INSTALLATION
 ------------
@@ -15,3 +15,11 @@ USAGE
 TESTING
 -------
 - bin/behat via command-line
+
+TODO
+----
+* Autoloader
+- Behat tests for web-interface
+- Commit hooks
+- PHPUnit tests (TDD)
+- Lambda's / Closures

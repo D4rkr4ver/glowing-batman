@@ -7,9 +7,9 @@
 <body>
 <?php
 
-use Output\Html\HtmlFormatter;
+require_once(__DIR__ . '/../Autoload.php');
 
-require_once(__DIR__ . '/../assignment.php');
+use Output\Html\HtmlFormatter;
 
 $outputFormatter = new Assignment(new HtmlFormatter());
 

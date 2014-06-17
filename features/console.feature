@@ -1,7 +1,7 @@
 Feature: Outputting via command-line
-  In order to see output via the command-line
+  In order to ensure the tool works correctly
   As a user
-  I need to call Command/Console.php via the command line
+  I need to be able to see output via the command-line
 
   Scenario: Running command via the command-line
     Given I am in this project's root dir on the command-line

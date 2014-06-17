@@ -1,7 +1,5 @@
 <?php
 
-require_once(__DIR__ . '/vendor/autoload.php');
-
 use Controllers\AvgLoadTime;
 use Controllers\MoreThanLoadTime;
 use Controllers\HighestMemUse;
@@ -18,26 +16,6 @@ gegeven een array met daarin een lijst van 3 velden (laadtijd (float), geheugeng
 * time, mem_use, route van het single request met de hoogste memory use
 * route naam en totaal time, mem_use van de route die overall de meeste time gebruikt heeft
 */
-
-require_once('Controllers/AvgLoadTime.php');
-require_once('Controllers/MoreThanLoadTime.php');
-require_once('Controllers/HighestMemUse.php');
-require_once('Controllers/MostCalledRoute.php');
-require_once('Controllers/RouteWithMostTime.php');
-require_once('Output/OutputFormatter.php');
-require_once('Output/Html/AvgLoadTimeHtmlFormatter.php');
-require_once('Output/Html/HighestMemUseHtmlFormatter.php');
-require_once('Output/Html/MoreThanLoadTimeHtmlFormatter.php');
-require_once('Output/Html/MostCalledRouteHtmlFormatter.php');
-require_once('Output/Html/RouteWithMostTimeHtmlFormatter.php');
-require_once('Output/Html/HtmlFormatter.php');
-require_once('Output/Text/AvgLoadTimeTextFormatter.php');
-require_once('Output/Text/HighestMemUseTextFormatter.php');
-require_once('Output/Text/MoreThanLoadTimeTextFormatter.php');
-require_once('Output/Text/MostCalledRouteTextFormatter.php');
-require_once('Output/Text/RouteWithMostTimeTextFormatter.php');
-require_once('Output/Text/TextFormatter.php');
-require_once('Output/UpperCase.php');
 
 class Assignment
 {
