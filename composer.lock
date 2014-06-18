@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c0cea323f90d0b3658aceee360cd7ec6",
+    "hash": "bbda2edf3e6df83ff5c2ff284da0d27f",
     "packages": [
 
     ],
@@ -15,12 +15,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "bab7f3e716bf6254e43ed0bf4c8ee69ade300bd0"
+                "reference": "03b7e6a4dc96118020adc1d714c8feacea27cb6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/bab7f3e716bf6254e43ed0bf4c8ee69ade300bd0",
-                "reference": "bab7f3e716bf6254e43ed0bf4c8ee69ade300bd0",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/03b7e6a4dc96118020adc1d714c8feacea27cb6c",
+                "reference": "03b7e6a4dc96118020adc1d714c8feacea27cb6c",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2014-06-06 03:13:44"
+            "time": "2014-06-16 22:05:26"
         },
         {
             "name": "behat/gherkin",
@@ -442,12 +442,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6de857e361061e228d1f129049d9f7911568f0ec"
+                "reference": "1a5575b9148c2d2f6cb19d1551597e5d9bbd402d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6de857e361061e228d1f129049d9f7911568f0ec",
-                "reference": "6de857e361061e228d1f129049d9f7911568f0ec",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1a5575b9148c2d2f6cb19d1551597e5d9bbd402d",
+                "reference": "1a5575b9148c2d2f6cb19d1551597e5d9bbd402d",
                 "shasum": ""
             },
             "require": {
@@ -508,7 +508,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-06-16 06:40:56"
+            "time": "2014-06-17 01:59:42"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -1170,12 +1170,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Translation.git",
-                "reference": "eb94a43aeaa1ccacbd4690f1cd08c008c96b0886"
+                "reference": "648fe60e8921358aadb0d50b74339c52691a1763"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Translation/zipball/eb94a43aeaa1ccacbd4690f1cd08c008c96b0886",
-                "reference": "eb94a43aeaa1ccacbd4690f1cd08c008c96b0886",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/648fe60e8921358aadb0d50b74339c52691a1763",
+                "reference": "648fe60e8921358aadb0d50b74339c52691a1763",
                 "shasum": ""
             },
             "require": {
@@ -1218,7 +1218,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-23 14:36:49"
+            "time": "2014-06-17 05:29:56"
         },
         {
             "name": "symfony/yaml",
