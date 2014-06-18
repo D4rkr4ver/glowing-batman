@@ -24,5 +24,6 @@ TODO
 - Commit hooks
 - PHPUnit tests (TDD)
 - Closures
+- Bower
 
 * Lambda's (anonymous functions)
