@@ -23,4 +23,6 @@ TODO
 - Behat tests for web-interface
 - Commit hooks
 - PHPUnit tests (TDD)
-- Lambda's / Closures
+- Closures
+
+* Lambda's (anonymous functions)
