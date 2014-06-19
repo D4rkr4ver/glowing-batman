@@ -5,12 +5,6 @@ namespace Output\Html;
 use Output\OutputFormatter;
 use Output\UpperCase;
 
-use Output\Html\AvgLoadTimeHtmlFormatter,
-    Output\Html\HighestMemUseHtmlFormatter,
-    Output\Html\MoreThanLoadTimeHtmlFormatter,
-    Output\Html\MostCalledRouteHtmlFormatter,
-    Output\Html\RouteWithMostTimeHtmlFormatter;
-
 class HtmlFormatter implements OutputFormatter
 {
     public $classes = array();
