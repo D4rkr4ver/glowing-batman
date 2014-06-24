@@ -11,6 +11,7 @@ class AvgLoadTimeHtmlFormatter implements OutputFormatter
      * Outputs results to HTML
      *
      * @param AvgLoadTime $object
+     * @return string
      */
     public function output($object)
     {
@@ -19,7 +20,7 @@ class AvgLoadTimeHtmlFormatter implements OutputFormatter
         if ($array['count'] !== 0) {
             $array['loadtime'] = $array['loadtime'] / $array['count'];
         }
-        echo sprintf('<p>De gemiddelde laadtijd van items die meer dan <b>%d</b> geheugen gebruiken is <b>%s</b></p>', $array['memory'], $array['loadtime']);
+        return sprintf('<p>De gemiddelde laadtijd van items die meer dan <b>%d</b> geheugen gebruiken is <b>%s</b></p>', $array['memory'], $array['loadtime']);
     }
 
 

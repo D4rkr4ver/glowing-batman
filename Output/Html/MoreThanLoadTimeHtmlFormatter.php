@@ -11,11 +11,12 @@ class MoreThanLoadTimeHtmlFormatter implements OutputFormatter
      * Outputs results to HTML
      *
      * @param MoreThanLoadTime $object
+     * @return string
      */
     public function output($object)
     {
         $array = $object->getMoreThanLoadTime();
-        echo sprintf('<p><b>%s</b> requests hebben meer dan <b>%s</b> laadtijd nodig</p>', $array['count'], $array['loadtime']);
+        return sprintf('<p><b>%s</b> requests hebben meer dan <b>%s</b> laadtijd nodig</p>', $array['count'], $array['loadtime']);
     }
 
 

@@ -3,7 +3,7 @@
 namespace Output\Html;
 
 use Output\OutputFormatter;
-use Output\UpperCase;
+use Output\AvgLoadTimeUpperCase;
 
 class HtmlFormatter implements OutputFormatter
 {
@@ -12,12 +12,12 @@ class HtmlFormatter implements OutputFormatter
     public function __construct()
     {
         $this->classes = array(
+            new AvgLoadTimeUpperCase(new AvgLoadTimeHtmlFormatter()),
             new AvgLoadTimeHtmlFormatter(),
             new HighestMemUseHtmlFormatter(),
             new MoreThanLoadTimeHtmlFormatter(),
             new MostCalledRouteHtmlFormatter(),
             new RouteWithMostTimeHtmlFormatter(),
-            new UpperCase(new AvgLoadTimeHtmlFormatter()),
         );
     }
 

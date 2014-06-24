@@ -3,7 +3,7 @@
 namespace Output\Text;
 
 use Output\OutputFormatter;
-use Output\UpperCase;
+use Output\AvgLoadTimeUpperCase;
 
 class TextFormatter implements OutputFormatter
 {
@@ -12,12 +12,12 @@ class TextFormatter implements OutputFormatter
     public function __construct()
     {
         $this->classes = array(
+            new AvgLoadTimeUpperCase(new AvgLoadTimeTextFormatter()),
             new AvgLoadTimeTextFormatter(),
             new HighestMemUseTextFormatter(),
             new MoreThanLoadTimeTextFormatter(),
             new MostCalledRouteTextFormatter(),
             new RouteWithMostTimeTextFormatter(),
-            new UpperCase(new AvgLoadTimeTextFormatter()),
         );
     }
 

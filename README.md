@@ -18,12 +18,15 @@ TESTING
 
 TODO
 ----
-* Autoloader
-* Vagrant provisioning
+
 - Behat tests for web-interface
 - Commit hooks
 - PHPUnit tests (TDD)
 - Closures
 - Bower
+- Lambda's (anonymous functions)
 
-* Lambda's (anonymous functions)
+DONE
+----
+- Autoloader
+- Vagrant provisioning
