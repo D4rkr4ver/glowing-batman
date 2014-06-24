@@ -12,7 +12,7 @@ class TextFormatter implements OutputFormatter
     public function __construct()
     {
         $this->classes = array(
-            new AvgLoadTimeUpperCase(new AvgLoadTimeTextFormatter()),
+            new AvgLoadTimeUpperCase(new AvgLoadTimeTextFormatter(), 0.4),
             new AvgLoadTimeTextFormatter(),
             new HighestMemUseTextFormatter(),
             new MoreThanLoadTimeTextFormatter(),
