@@ -17,10 +17,7 @@ class AvgLoadTimeTextFormatter implements OutputFormatter
     {
         $array = $object->getAvgLoadTime();
 
-        if ($array['count'] !== 0) {
-            $array['loadtime'] = $array['loadtime'] / $array['count'];
-        }
-        return sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $array['memory'], $array['loadtime']);
+        return sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $array['memory'], $array['avgLoadTime']);
     }
 
     public function match($object)

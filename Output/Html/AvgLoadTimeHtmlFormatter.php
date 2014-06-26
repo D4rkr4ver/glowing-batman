@@ -17,10 +17,7 @@ class AvgLoadTimeHtmlFormatter implements OutputFormatter
     {
         $array = $object->getAvgLoadTime();
 
-        if ($array['count'] !== 0) {
-            $array['loadtime'] = $array['loadtime'] / $array['count'];
-        }
-        return sprintf('<p>De gemiddelde laadtijd van items die meer dan <b>%d</b> geheugen gebruiken is <b>%s</b></p>', $array['memory'], $array['loadtime']);
+        return sprintf('<p>De gemiddelde laadtijd van items die meer dan <b>%d</b> geheugen gebruiken is <b>%s</b></p>', $array['memory'], $array['avgLoadTime']);
     }
 
 

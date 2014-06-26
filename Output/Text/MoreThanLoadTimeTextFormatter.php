@@ -16,7 +16,7 @@ class MoreThanLoadTimeTextFormatter implements OutputFormatter
     public function output($object)
     {
         $array = $object->getMoreThanLoadTime();
-        return sprintf('%s requests hebben meer dan %s laadtijd nodig', $array['count'], $array['loadtime']);
+        return sprintf('%s requests hebben meer dan %s laadtijd nodig', $array['count'], $array['loadTime']);
     }
 
     public function match($object)

@@ -7,24 +7,24 @@ class MoreThanLoadTime
     private $moreThanLoadTime = array();
 
     /**
-     * Calculates the number of requests that require more than $loadtime time
+     * Calculates the number of requests that require more than $loadTime time
      *
      * @param array $list
-     * @param double $loadtime
+     * @param double $loadTime
      */
-    public function calculateMoreThanLoadTime(array $list, $loadtime)
+    public function calculateMoreThanLoadTime(array $list, $loadTime)
     {
         $moreThanLoadTime = 0;
 
         foreach ($list as $value) {
-            if ($value[0] > $loadtime) {
+            if ($value[0] > $loadTime) {
                 $moreThanLoadTime++;
             }
         }
 
         $this->moreThanLoadTime = array(
             'count' => $moreThanLoadTime,
-            'loadtime' => $loadtime,
+            'loadTime' => $loadTime,
         );
     }
 

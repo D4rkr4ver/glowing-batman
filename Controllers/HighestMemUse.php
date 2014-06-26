@@ -22,7 +22,7 @@ class HighestMemUse
         }
 
         $this->highestValue = array(
-            'loadtime' => $highestValue[0],
+            'loadTime' => $highestValue[0],
             'memory' => $highestValue[1],
             'route' => $highestValue[2],
         );

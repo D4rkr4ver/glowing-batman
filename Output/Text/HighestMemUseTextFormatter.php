@@ -16,7 +16,7 @@ class HighestMemUseTextFormatter implements OutputFormatter
     public function output($object)
     {
         $array = $object->getHighestMemUse();
-        return sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $array['loadtime'], $array['memory'], $array['route']);
+        return sprintf('Het request met de hoogste memory heeft %s laadtijd, %s geheugen, en route \'%s\'', $array['loadTime'], $array['memory'], $array['route']);
     }
 
     public function match($object)

@@ -8,15 +8,15 @@ class AvgLoadTimeUpperCase implements OutputFormatter
 {
     public $formatter;
 
-    public $loadtime;
+    public $loadTime;
 
-    public function __construct(OutputFormatter $formatter, $loadtime)
+    public function __construct(OutputFormatter $formatter, $loadTime)
     {
         $this->formatter = $formatter;
-        if (is_float($loadtime)) {
-            $this->loadtime = $loadtime;
+        if (is_float($loadTime)) {
+            $this->loadTime = $loadTime;
         } else {
-            throw new \InvalidArgumentException(sprintf('"%s" needs to be a float', $loadtime));
+            throw new \InvalidArgumentException(sprintf('"%s" needs to be a float', $loadTime));
         }
     }
 
@@ -40,9 +40,7 @@ class AvgLoadTimeUpperCase implements OutputFormatter
         if ($object instanceof AvgLoadTime) {
             $array = $object->getAvgLoadTime();
 
-            if ($array['loadtime'] > $this->loadtime) {
-                return true;
-            }
+            return $array['loadTime'] > $this->loadTime;
         }
     }
 }
