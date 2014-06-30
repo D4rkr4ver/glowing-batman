@@ -37,7 +37,9 @@ class FeatureContext extends PHPUnit_Framework_TestCase implements SnippetAccept
     public function iType($arg1)
     {
         $result = array();
-        if ($arg1 === 'php Command/Console.php') {
+        if ($arg1 === 'php src/Command/Console.php') {
+            exec('php src/Command/Console.php', $result);
+        } elseif ($arg1 === 'php Command/Console.php') {
             exec('php Command/Console.php', $result);
         } elseif ($arg1 === 'php Console.php') {
             exec('php Console.php', $result);

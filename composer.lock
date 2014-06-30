@@ -15,12 +15,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Behat.git",
-                "reference": "c0409b8a44dd363ea69a39428d131b1ae3581814"
+                "reference": "ed086c8572bc6b4563052120c8d6d98c1924f28f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Behat/zipball/c0409b8a44dd363ea69a39428d131b1ae3581814",
-                "reference": "c0409b8a44dd363ea69a39428d131b1ae3581814",
+                "url": "https://api.github.com/repos/Behat/Behat/zipball/ed086c8572bc6b4563052120c8d6d98c1924f28f",
+                "reference": "ed086c8572bc6b4563052120c8d6d98c1924f28f",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2014-06-20 21:35:01"
+            "time": "2014-06-29 15:02:16"
         },
         {
             "name": "behat/gherkin",
@@ -521,12 +521,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "48b59bcb201db52fa8509dd764ab3422df82e3af"
+                "reference": "1c29ed670ecc58ea562ed647b11256af26dca50c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/48b59bcb201db52fa8509dd764ab3422df82e3af",
-                "reference": "48b59bcb201db52fa8509dd764ab3422df82e3af",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1c29ed670ecc58ea562ed647b11256af26dca50c",
+                "reference": "1c29ed670ecc58ea562ed647b11256af26dca50c",
                 "shasum": ""
             },
             "require": {
@@ -578,7 +578,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2014-05-26 12:16:12"
+            "time": "2014-06-29 08:51:15"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -843,12 +843,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "269280ed3ae3eb354894f2f76ccbe0d529e5a39a"
+                "reference": "215e10f6355e648faa786c0ba9093d132b30e56b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/269280ed3ae3eb354894f2f76ccbe0d529e5a39a",
-                "reference": "269280ed3ae3eb354894f2f76ccbe0d529e5a39a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/215e10f6355e648faa786c0ba9093d132b30e56b",
+                "reference": "215e10f6355e648faa786c0ba9093d132b30e56b",
                 "shasum": ""
             },
             "require": {
@@ -893,7 +893,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2014-06-22 08:11:45"
+            "time": "2014-06-28 11:28:27"
         },
         {
             "name": "sebastian/comparator",
@@ -1498,12 +1498,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Finder.git",
-                "reference": "bed12a8b775813b252daf137b64f79113fbc5da5"
+                "reference": "e26f1529c714f57d667599b4eb1b482326691f08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/bed12a8b775813b252daf137b64f79113fbc5da5",
-                "reference": "bed12a8b775813b252daf137b64f79113fbc5da5",
+                "url": "https://api.github.com/repos/symfony/Finder/zipball/e26f1529c714f57d667599b4eb1b482326691f08",
+                "reference": "e26f1529c714f57d667599b4eb1b482326691f08",
                 "shasum": ""
             },
             "require": {
@@ -1538,7 +1538,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-23 14:36:49"
+            "time": "2014-06-20 17:41:51"
         },
         {
             "name": "symfony/translation",
@@ -1604,12 +1604,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "b01d366060f33e18fd98b0008c41a01b0d25c95c"
+                "reference": "a0e90f173c33a57bfbb5561793d25864182239ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/b01d366060f33e18fd98b0008c41a01b0d25c95c",
-                "reference": "b01d366060f33e18fd98b0008c41a01b0d25c95c",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/a0e90f173c33a57bfbb5561793d25864182239ad",
+                "reference": "a0e90f173c33a57bfbb5561793d25864182239ad",
                 "shasum": ""
             },
             "require": {
@@ -1644,7 +1644,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "http://symfony.com",
-            "time": "2014-06-04 06:43:44"
+            "time": "2014-06-20 17:41:51"
         }
     ],
     "aliases": [
