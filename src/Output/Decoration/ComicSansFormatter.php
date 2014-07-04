@@ -21,7 +21,7 @@ class ComicSansFormatter implements OutputFormatter
      */
     public function output($object)
     {
-        return '<style>*{font-family: Comic Sans MS}</style>' . $this->formatter->output($object);
+        return '<span style="font-family: Comic Sans MS">' . $this->formatter->output($object) . '</span>';
     }
 
     public function match($object)
