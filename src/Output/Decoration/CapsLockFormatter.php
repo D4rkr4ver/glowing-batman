@@ -26,8 +26,6 @@ class CapsLockFormatter implements OutputFormatter
 
     public function match($object)
     {
-        foreach ($this->classes as $class) {
-            return $class->match($object);
-        }
+        return $this->formatter->match($object);
     }
 }

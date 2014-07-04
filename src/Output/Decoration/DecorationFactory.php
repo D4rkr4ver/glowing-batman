@@ -8,6 +8,7 @@ use Output\Text\TextFormatter;
 class DecorationFactory
 {
     public $capsLockDay = '2014-10-22';
+
     public $comicSansDay = '2014-07-04';
 
     public function getHtmlFormatter()
