@@ -11,17 +11,10 @@
 require_once(__DIR__ . '/../Autoload.php');
 require_once(__DIR__ . '/../config.php');
 
-use Output\Html\HtmlFormatter;
+use Output\Decoration\DecorationFactory;
 
-$config = new Config();
-
-switch (date('Y-m-d')) {
-    case $config->comicSansDay:
-        echo '<style>*{font-family: Comic Sans MS}</style>';
-        break;
-}
-
-$outputFormatter = new Assignment(new HtmlFormatter());
+$x = new DecorationFactory();
+$outputFormatter = new Assignment($x->getHtmlFormatter());
 
 ?>
 </body>

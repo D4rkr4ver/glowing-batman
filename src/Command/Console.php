@@ -2,6 +2,8 @@
 
 require_once(__DIR__ . '/../../Autoload.php');
 
+use Output\Decoration\DecorationFactory;
 use Output\Text\TextFormatter;
 
-$outputFormatter = new Assignment(new TextFormatter());
+$x = new DecorationFactory();
+$outputFormatter = new Assignment($x->getTextFormatter(new TextFormatter()));
