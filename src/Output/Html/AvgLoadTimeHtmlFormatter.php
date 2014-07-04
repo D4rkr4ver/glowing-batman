@@ -20,7 +20,6 @@ class AvgLoadTimeHtmlFormatter implements OutputFormatter
         return sprintf('<p>De gemiddelde laadtijd van items die meer dan <b>%d</b> geheugen gebruiken is <b>%s</b></p>', $array['memory'], $array['avgLoadTime']);
     }
 
-
     public function match($object)
     {
         return $object instanceof AvgLoadTime;

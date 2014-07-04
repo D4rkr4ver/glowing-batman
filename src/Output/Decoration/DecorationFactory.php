@@ -2,7 +2,6 @@
 
 namespace Output\Decoration;
 
-use Output\Decoration\ComicSansFormatter;
 use Output\Html\HtmlFormatter;
 use Output\Text\TextFormatter;
 
