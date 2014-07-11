@@ -15,30 +15,30 @@ class DecorationFactory
     {
         switch (date('Y-m-d')) {
             case $this->capsLockDay:
-                $htmlFormatter = new CapsLockFormatter(new HtmlFormatter());
+                $formatter = new CapsLockFormatter(new HtmlFormatter());
                 break;
             case $this->comicSansDay:
-                $htmlFormatter = new ComicSansFormatter(new HtmlFormatter());
+                $formatter = new ComicSansFormatter(new HtmlFormatter());
                 break;
             default:
-                $htmlFormatter = new HtmlFormatter();
+                $formatter = new HtmlFormatter();
                 break;
         }
 
-        return $htmlFormatter;
+        return $formatter;
     }
 
     public function getTextFormatter()
     {
         switch (date('Y-m-d')) {
             case $this->capsLockDay:
-                $htmlFormatter = new CapsLockFormatter(new TextFormatter());
+                $formatter = new CapsLockFormatter(new TextFormatter());
                 break;
             default:
-                $htmlFormatter = new TextFormatter();
+                $formatter = new TextFormatter();
                 break;
         }
 
-        return $htmlFormatter;
+        return $formatter;
     }
 }
