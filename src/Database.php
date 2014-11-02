@@ -6,7 +6,7 @@ class Database
 
     public function connect($host, $user, $password, $database)
     {
-        mysqli_connect($host, $user, $password, $database) or die('Cannot connect, n00b');
+        $this->con = mysqli_connect($host, $user, $password, $database) or die('Cannot connect, n00b');
         $this->error();
     }
 
