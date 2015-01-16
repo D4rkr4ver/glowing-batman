@@ -18,8 +18,11 @@
       - php5
       - mysql-server
       - php5-mysql
+      - phpmyadmin
       - php5-xdebug
-#      - jenkins
+
+    - name: write php.ini
+      template: src=templates/php.ini.j2 dest=/etc/php5/apache2/php.ini owner=root group=root mode=0644
 
     - name: Apache | Enable required modules
       action: command a2enmod rewrite
@@ -32,6 +35,9 @@
 
     - name: Apache | Enable dev site
       action: command a2ensite dev
+
+    - name: link phpmyadmin config to the correct path
+      file: src=/etc/phpmyadmin/apache.conf dest=/etc/apache2/conf.d/phpmyadmin.conf state=link
 
       notify:
       - Apache | Restart Apache2
