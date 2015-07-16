@@ -9,6 +9,9 @@
             "email": "r.geraads@gmail.com"
         }
     ],
+    "require": {
+        "php": ">=5.5"
+    },
     "require-dev": {
         "phpunit/phpunit": "^4.4",
         "behat/behat": "^3.0",
