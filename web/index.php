@@ -9,12 +9,11 @@
 <?php
 
 require_once(__DIR__ . '/../Autoload.php');
-require_once(__DIR__ . '/../config.php');
 
 use Output\Decoration\DecorationFactory;
 
-$x = new DecorationFactory();
-$outputFormatter = new Assignment($x->getHtmlFormatter());
+$decorationFactory = new DecorationFactory();
+$outputFormatter   = new Assignment($decorationFactory->getHtmlFormatter());
 
 ?>
 </body>

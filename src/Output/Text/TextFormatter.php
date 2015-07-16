@@ -2,29 +2,34 @@
 
 namespace Output\Text;
 
-use Output\OutputFormatter;
 use Output\AvgLoadTimeUpperCase;
+use Output\OutputFormatter;
 
-class TextFormatter implements OutputFormatter
+final class TextFormatter implements OutputFormatter
 {
-    public $classes = array();
+    /**
+     * @var array
+     */
+    public $classes = [];
 
     public function __construct()
     {
-        $this->classes = array(
+        $this->classes = [
             new AvgLoadTimeUpperCase(new AvgLoadTimeTextFormatter(), 0.4),
             new AvgLoadTimeTextFormatter(),
             new HighestMemUseTextFormatter(),
             new MoreThanLoadTimeTextFormatter(),
             new MostCalledRouteTextFormatter(),
             new RouteWithMostTimeTextFormatter(),
-        );
+        ];
     }
 
     /**
-     * Outputs results to plain text
+     * Outputs results to plain text.
      *
      * @param $object
+     *
+     * @return mixed
      */
     public function output($object)
     {

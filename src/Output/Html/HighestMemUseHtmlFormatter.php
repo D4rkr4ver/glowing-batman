@@ -2,21 +2,23 @@
 
 namespace Output\Html;
 
-use Output\OutputFormatter;
 use Controllers\HighestMemUse;
+use Output\OutputFormatter;
 
-class HighestMemUseHtmlFormatter implements OutputFormatter
+final class HighestMemUseHtmlFormatter implements OutputFormatter
 {
     /**
-     * Outputs results to HTML
+     * Outputs results in HTML.
      *
      * @param HighestMemUse $object
+     *
      * @return string
      */
     public function output($object)
     {
-        $array = $object->getHighestMemUse();
-        return sprintf('<p>Het request met de hoogste memory heeft <b>%s</b> laadtijd, <b>%s</b> geheugen, en route <b>\'%s\'</b></p>', $array['loadTime'], $array['memory'], $array['route']);
+        $result = $object->getHighestMemUse();
+
+        return sprintf('<p>Het request met de hoogste memory heeft <b>%g</b> laadtijd, <b>%d</b> geheugen, en route <b>\'%s\'</b></p>', $result['loadTime'], $result['memory'], $result['route']);
     }
 
     public function match($object)

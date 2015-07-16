@@ -2,29 +2,34 @@
 
 namespace Output\Html;
 
-use Output\OutputFormatter;
 use Output\AvgLoadTimeUpperCase;
+use Output\OutputFormatter;
 
-class HtmlFormatter implements OutputFormatter
+final class HtmlFormatter implements OutputFormatter
 {
-    public $classes = array();
+    /**
+     * @var array
+     */
+    public $classes = [];
 
     public function __construct()
     {
-        $this->classes = array(
+        $this->classes = [
             new AvgLoadTimeUpperCase(new AvgLoadTimeHtmlFormatter(), 0.4),
             new AvgLoadTimeHtmlFormatter(),
             new HighestMemUseHtmlFormatter(),
             new MoreThanLoadTimeHtmlFormatter(),
             new MostCalledRouteHtmlFormatter(),
             new RouteWithMostTimeHtmlFormatter(),
-        );
+        ];
     }
 
     /**
-     * Outputs results to HTML
+     * Outputs results to HTML.
      *
      * @param $object
+     *
+     * @return mixed
      */
     public function output($object)
     {

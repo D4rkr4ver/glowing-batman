@@ -1,13 +1,17 @@
 <?php
 
-class Autoload
+final class Autoload
 {
     function loadClass($className)
     {
         $className = str_replace('\\', DIRECTORY_SEPARATOR, $className);
+
         require_once(__DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . $className . '.php');
     }
 }
 
+define('PROJECT_ROOT', __DIR__);
+
 $instance = new Autoload();
-spl_autoload_register(array($instance, 'loadClass'));
+
+spl_autoload_register([$instance, 'loadClass']);

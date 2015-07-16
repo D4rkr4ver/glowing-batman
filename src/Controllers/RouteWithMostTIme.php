@@ -2,35 +2,39 @@
 
 namespace Controllers;
 
-class RouteWithMostTime
+final class RouteWithMostTime
 {
-    public $routeWithMostTime = array();
+    /**
+     * @var array
+     */
+    public $routeWithMostTime = [];
 
     /**
-     * Calculates all stats for every route by time
+     * Calculates all stats for every route by time.
      *
      * @param array $list
      */
     public function calculateRouteTime(array $list)
     {
-        $routes = array();
+        $routes = [];
 
         foreach ($list as $key => $value) {
             if (isset($routes[$value[2]])) {
                 $routes[$value[2]]['time'] += $value[0];
                 $routes[$value[2]]['memory'] += $value[1];
             } else {
-                $routes[$value[2]] = array(
-                    'time' => $value[0],
+                $routes[$value[2]] = [
+                    'time'   => $value[0],
                     'memory' => $value[1],
-                );
+                ];
             }
         }
+
         $this->routeWithMostTime = $routes;
     }
 
     /**
-     * Calculates route with most time
+     * Calculates route with most time.
      *
      * @param array $list
      */
@@ -40,20 +44,21 @@ class RouteWithMostTime
         $this->calculateRouteTime($list);
         $routes = $this->routeWithMostTime;
 
-        $routeWithMostTime = array(
-            'route' => '',
-            'time' => 0,
+        $routeWithMostTime = [
+            'route'  => '',
+            'time'   => 0,
             'memory' => 0,
-        );
+        ];
 
         foreach ($routes as $route => $array) {
             if ($array['time'] > $routeWithMostTime['time']) {
-                $routeWithMostTime['route'] = $route;
-                $routeWithMostTime['time'] = $array['time'];
+                $routeWithMostTime['route']  = $route;
+                $routeWithMostTime['time']   = $array['time'];
                 $routeWithMostTime['memory'] = $array['memory'];
             }
 
         }
+
         $this->routeWithMostTime = $routeWithMostTime;
     }
 

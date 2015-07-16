@@ -2,14 +2,14 @@
 
 namespace Controllers;
 
-class MoreThanLoadTime
+final class MoreThanLoadTime
 {
-    private $moreThanLoadTime = array();
+    private $moreThanLoadTime = [];
 
     /**
-     * Calculates the number of requests that require more than $loadTime time
+     * Calculates the number of requests that require more than $loadTime time.
      *
-     * @param array $list
+     * @param array  $list
      * @param double $loadTime
      */
     public function calculateMoreThanLoadTime(array $list, $loadTime)
@@ -22,10 +22,10 @@ class MoreThanLoadTime
             }
         }
 
-        $this->moreThanLoadTime = array(
-            'count' => $moreThanLoadTime,
+        $this->moreThanLoadTime = [
+            'count'    => $moreThanLoadTime,
             'loadTime' => $loadTime,
-        );
+        ];
     }
 
     public function getMoreThanLoadTime()

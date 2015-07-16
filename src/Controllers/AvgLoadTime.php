@@ -2,19 +2,19 @@
 
 namespace Controllers;
 
-class AvgLoadTime
+final class AvgLoadTime
 {
-    private $avgLoadTime = array();
+    private $avgLoadTime = [];
 
     /**
-     * Calculates the average load time of all requests that consume more than $memUsage memory
+     * Calculates the average load time of all requests that consume more than $memUsage memory.
      *
      * @param array $list
-     * @param int $memUsage
+     * @param int   $memUsage
      */
     public function calculateAvgLoadTime(array $list, $memUsage)
     {
-        $count = 0;
+        $count    = 0;
         $loadTime = 0;
 
         foreach ($list as $value) {
@@ -24,14 +24,14 @@ class AvgLoadTime
             }
         }
 
-        $avgLoadTime = $count === 0 ? $loadTime : $loadTime / $count;
+        $avgLoadTime = ($count === 0) ? $loadTime : $loadTime / $count;
 
-        $this->avgLoadTime = array(
-            'memory' => $memUsage,
-            'count' => $count,
-            'loadTime' => round($loadTime, 2),
+        $this->avgLoadTime = [
+            'memory'      => $memUsage,
+            'count'       => $count,
+            'loadTime'    => round($loadTime, 2),
             'avgLoadTime' => round($avgLoadTime, 2),
-        );
+        ];
     }
 
     public function getAvgLoadTime()

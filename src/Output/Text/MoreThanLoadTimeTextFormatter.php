@@ -2,21 +2,23 @@
 
 namespace Output\Text;
 
-use Output\OutputFormatter;
 use Controllers\MoreThanLoadTime;
+use Output\OutputFormatter;
 
-class MoreThanLoadTimeTextFormatter implements OutputFormatter
+final class MoreThanLoadTimeTextFormatter implements OutputFormatter
 {
     /**
-     * Outputs results to plain text
+     * Outputs results in plain text.
      *
      * @param MoreThanLoadTime $object
+     *
      * @return string
      */
     public function output($object)
     {
-        $array = $object->getMoreThanLoadTime();
-        return sprintf('%s requests hebben meer dan %s laadtijd nodig', $array['count'], $array['loadTime']);
+        $result = $object->getMoreThanLoadTime();
+
+        return sprintf('%d requests hebben meer dan %g laadtijd nodig', $result['count'], $result['loadTime']);
     }
 
     public function match($object)

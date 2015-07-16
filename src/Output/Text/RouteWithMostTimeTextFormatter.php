@@ -2,21 +2,23 @@
 
 namespace Output\Text;
 
-use Output\OutputFormatter;
 use Controllers\RouteWithMostTime;
+use Output\OutputFormatter;
 
-class RouteWithMostTimeTextFormatter implements OutputFormatter
+final class RouteWithMostTimeTextFormatter implements OutputFormatter
 {
     /**
-     * Outputs results to plain text
+     * Outputs results in plain text.
      *
      * @param RouteWithMostTime $object
+     *
      * @return string
      */
     public function output($object)
     {
-        $array = $object->getRouteWithMostTime();
-        return sprintf('%s heeft met %s seconden de meeste tijd nodig, en gebruikt %s geheugen', $array['route'], $array['time'], $array['memory']);
+        $result = $object->getRouteWithMostTime();
+
+        return sprintf('%s heeft met %g seconden de meeste tijd nodig, en gebruikt %d geheugen', $result['route'], $result['time'], $result['memory']);
     }
 
     public function match($object)

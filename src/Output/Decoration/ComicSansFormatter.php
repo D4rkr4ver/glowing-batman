@@ -4,24 +4,31 @@ namespace Output\Decoration;
 
 use Output\OutputFormatter;
 
-class ComicSansFormatter implements OutputFormatter
+final class ComicSansFormatter implements OutputFormatter
 {
+    /**
+     * @var OutputFormatter
+     */
     public $formatter;
 
+    /**
+     * @param OutputFormatter $formatter
+     */
     public function __construct(OutputFormatter $formatter)
     {
         $this->formatter = $formatter;
     }
 
     /**
-     * Outputs results to Comic Sans
+     * Outputs results to Comic Sans, or the generic font sans-serif.
      *
-     * @param $object
+     * @param string $object
+     *
      * @return string
      */
     public function output($object)
     {
-        return '<span style="font-family: Comic Sans MS">' . $this->formatter->output($object) . '</span>';
+        return '<span style="font-family: Comic Sans MS, sans-serif">' . $this->formatter->output($object) . '</span>';
     }
 
     public function match($object)

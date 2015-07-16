@@ -2,19 +2,26 @@
 
 namespace Controllers;
 
-class MostCalledRoute
+final class MostCalledRoute
 {
-    public $routeCount = array();
-    public $mostCalledRoute = array();
+    /**
+     * @var array
+     */
+    public $routeCount = [];
 
     /**
-     * Calculates all stats for every route by name
+     * @var array
+     */
+    public $mostCalledRoute = [];
+
+    /**
+     * Calculates all stats for every route by name.
      *
      * @param array $list
      */
     public function calculateRouteCount(array $list)
     {
-        $routes = array();
+        $routes = [];
 
         foreach ($list as $key => $value) {
             if (isset($routes[$value[2]])) {
@@ -27,7 +34,7 @@ class MostCalledRoute
     }
 
     /**
-     * Calculates the most called route
+     * Calculates the most called route.
      *
      * @param array $list
      */
@@ -37,10 +44,10 @@ class MostCalledRoute
         $this->calculateRouteCount($list);
         $routes = $this->routeCount;
 
-        $mostCalledRoute = array(
+        $mostCalledRoute = [
             'route' => '',
             'count' => 0,
-        );
+        ];
 
         foreach ($routes as $route => $count) {
             if ($count > $mostCalledRoute['count']) {
@@ -48,6 +55,7 @@ class MostCalledRoute
                 $mostCalledRoute['count'] = $count;
             }
         }
+
         $this->mostCalledRoute = $mostCalledRoute;
     }
 

@@ -2,21 +2,23 @@
 
 namespace Output\Html;
 
-use Output\OutputFormatter;
 use Controllers\MostCalledRoute;
+use Output\OutputFormatter;
 
-class MostCalledRouteHtmlFormatter implements OutputFormatter
+final class MostCalledRouteHtmlFormatter implements OutputFormatter
 {
     /**
-     * Outputs results to plain text
+     * Outputs results in HTML.
      *
      * @param MostCalledRoute $object
+     *
      * @return string
      */
     public function output($object)
     {
-        $array = $object->getMostCalledRoute();
-        return sprintf('<p><b>%s</b> wordt met <b>%sx</b> het vaakst aangeroepen</p>', $array['route'], $array['count']);
+        $result = $object->getMostCalledRoute();
+
+        return sprintf('<p><b>%s</b> wordt met <b>%dx</b> het vaakst aangeroepen</p>', $result['route'], $result['count']);
     }
 
     public function match($object)

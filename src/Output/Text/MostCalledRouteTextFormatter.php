@@ -2,21 +2,23 @@
 
 namespace Output\Text;
 
-use Output\OutputFormatter;
 use Controllers\MostCalledRoute;
+use Output\OutputFormatter;
 
-class MostCalledRouteTextFormatter implements OutputFormatter
+final class MostCalledRouteTextFormatter implements OutputFormatter
 {
     /**
-     * Outputs results to plain text
+     * Outputs results in plain text.
      *
      * @param MostCalledRoute $object
+     *
      * @return string
      */
     public function output($object)
     {
-        $array = $object->getMostCalledRoute();
-        return sprintf('%s wordt met %sx het vaakst aangeroepen', $array['route'], $array['count']);
+        $result = $object->getMostCalledRoute();
+
+        return sprintf('%s wordt met %dx het vaakst aangeroepen', $result['route'], $result['count']);
     }
 
     public function match($object)

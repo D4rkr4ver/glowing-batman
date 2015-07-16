@@ -2,22 +2,23 @@
 
 namespace Output\Text;
 
-use Output\OutputFormatter;
 use Controllers\AvgLoadTime;
+use Output\OutputFormatter;
 
-class AvgLoadTimeTextFormatter implements OutputFormatter
+final class AvgLoadTimeTextFormatter implements OutputFormatter
 {
     /**
-     * Outputs results to plain text
+     * Outputs results in plain text.
      *
      * @param AvgLoadTime $object
+     *
      * @return string
      */
     public function output($object)
     {
-        $array = $object->getAvgLoadTime();
+        $result = $object->getAvgLoadTime();
 
-        return sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %s', $array['memory'], $array['avgLoadTime']);
+        return sprintf('De gemiddelde laadtijd van items die meer dan %d geheugen gebruiken is %g', $result['memory'], $result['avgLoadTime']);
     }
 
     public function match($object)

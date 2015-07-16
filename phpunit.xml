@@ -12,12 +12,11 @@
     stopOnFailure               = "false"
     syntaxCheck                 = "false"
     bootstrap                   = "Autoload.php"
-    strict                      = "false" >
+    strict                      = "false">
 
     <testsuites>
         <testsuite name="Project Test Suite">
             <directory suffix="Test.php">src/Tests</directory>
         </testsuite>
     </testsuites>
-
 </phpunit>

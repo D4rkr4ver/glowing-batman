@@ -5,19 +5,21 @@ namespace Output\Decoration;
 use Output\Html\HtmlFormatter;
 use Output\Text\TextFormatter;
 
-class DecorationFactory
+final class DecorationFactory
 {
-    public $capsLockDay = '2014-10-22';
+    const CAPS_LOCK_DAY  = '2014-10-22';
+    const COMIC_SANS_DAY = '2014-07-04';
 
-    public $comicSansDay = '2014-07-04';
-
+    /**
+     * @return CapsLockFormatter|ComicSansFormatter|HtmlFormatter
+     */
     public function getHtmlFormatter()
     {
         switch (date('Y-m-d')) {
-            case $this->capsLockDay:
+            case self::CAPS_LOCK_DAY:
                 $formatter = new CapsLockFormatter(new HtmlFormatter());
                 break;
-            case $this->comicSansDay:
+            case self::COMIC_SANS_DAY:
                 $formatter = new ComicSansFormatter(new HtmlFormatter());
                 break;
             default:
@@ -28,10 +30,13 @@ class DecorationFactory
         return $formatter;
     }
 
+    /**
+     * @return CapsLockFormatter|TextFormatter
+     */
     public function getTextFormatter()
     {
         switch (date('Y-m-d')) {
-            case $this->capsLockDay:
+            case self::CAPS_LOCK_DAY:
                 $formatter = new CapsLockFormatter(new TextFormatter());
                 break;
             default:

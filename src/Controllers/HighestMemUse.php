@@ -2,12 +2,12 @@
 
 namespace Controllers;
 
-class HighestMemUse
+final class HighestMemUse
 {
-    private $highestValue = array();
+    private $highestValue = [];
 
     /**
-     * Calculates time, memory and route of the single request with the highest memory usage
+     * Calculates time, memory and route of the single request with the highest memory usage.
      *
      * @param array $list
      */
@@ -21,11 +21,11 @@ class HighestMemUse
             }
         }
 
-        $this->highestValue = array(
+        $this->highestValue = [
             'loadTime' => $highestValue[0],
-            'memory' => $highestValue[1],
-            'route' => $highestValue[2],
-        );
+            'memory'   => $highestValue[1],
+            'route'    => $highestValue[2],
+        ];
     }
 
     public function getHighestMemUse()

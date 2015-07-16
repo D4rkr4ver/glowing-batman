@@ -1,8 +1,6 @@
 <?php
 
 use Behat\Behat\Context\SnippetAcceptingContext;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
 
 require_once(__DIR__ . '/../../vendor/Autoload.php');
 
@@ -36,16 +34,22 @@ class FeatureContext extends PHPUnit_Framework_TestCase implements SnippetAccept
      */
     public function iType($arg1)
     {
-        $result = array();
-        if ($arg1 === 'php src/Command/Console.php') {
-            exec('php src/Command/Console.php', $result);
-        } elseif ($arg1 === 'php Command/Console.php') {
-            exec('php Command/Console.php', $result);
-        } elseif ($arg1 === 'php Console.php') {
-            exec('php Console.php', $result);
-        } else {
-            throw new InvalidArgumentException('invalid exec command given.');
+        $result = [];
+        switch ($arg1) {
+            case 'php src/Command/Console.php':
+                exec('php src/Command/Console.php', $result);
+                break;
+            case 'php Command/Console.php':
+                exec('php Command/Console.php', $result);
+                break;
+            case 'php Console.php':
+                exec('php Console.php', $result);
+                break;
+            default:
+                throw new InvalidArgumentException('invalid exec command given.');
+                break;
         }
+
         $this->result = $result;
     }
 
