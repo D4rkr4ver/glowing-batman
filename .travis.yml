@@ -13,4 +13,4 @@ script:
 
 before_script:
  - composer selfupdate --quiet
- - composer install --no-interaction --prefer-source --dev
+ - composer install --no-interaction --prefer-source
