@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/rgeraads/glowing-batman.svg?branch=develop)](https://travis-ci.org/rgeraads/glowing-batman)
+
 README
 ======
 First test-project. Plain PHP with Composer, to get more knowledge of PHP functionality. Next project will likely be done in Symfony2.

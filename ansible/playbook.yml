@@ -1,0 +1,26 @@
+---
+- name: glowing-batman Provisioning
+  hosts: all
+  sudo: yes
+
+  tasks:
+  - name: update packages
+    apt: update_cache=yes
+
+  - name: install packages
+    apt: name={{ item }} state=latest
+    with_items:
+      - vim
+      - php5-fpm
+      - php5-cli
+      - mysql-server
+      - php5-mysql
+      - php5-xdebug
+      - nginx-light
+      - python-mysqldb
+
+  - name: create database
+    mysql_db: name=glowingbatman state=present
+
+  - name: create database user
+    mysql_user: name=vagrant password=vagrant host=% priv=*.*:ALL state=present
