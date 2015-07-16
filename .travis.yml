@@ -8,7 +8,7 @@ php:
 
 script:
  - bin/phpunit
- - bin/phpspec run
+ - bin/phpspec run --no-interaction
  - bin/behat --format progress
 
 before_script:
