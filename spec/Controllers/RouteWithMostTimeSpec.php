@@ -10,6 +10,6 @@ class RouteWithMostTimeSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Controllers\RouteWithMostTime');
+        $this->shouldHaveType(RouteWithMostTime::class);
     }
 }
