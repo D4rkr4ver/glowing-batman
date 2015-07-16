@@ -2,7 +2,7 @@
 
 use Behat\Behat\Context\SnippetAcceptingContext;
 
-require_once(__DIR__ . '/../../vendor/Autoload.php');
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 /**
  * Behat context class.
