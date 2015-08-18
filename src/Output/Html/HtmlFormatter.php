@@ -8,7 +8,7 @@ use Output\OutputFormatter;
 final class HtmlFormatter implements OutputFormatter
 {
     /**
-     * @var array
+     * @var OutputFormatter[]
      */
     public $classes = [];
 
