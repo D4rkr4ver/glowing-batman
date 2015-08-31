@@ -8,7 +8,7 @@
 <body>
 <?php
 
-require_once(__DIR__ . '/../Autoload.php');
+require_once(__DIR__ . '/../vendor/autoload.php');
 
 use Output\Decoration\DecorationFactory;
 
