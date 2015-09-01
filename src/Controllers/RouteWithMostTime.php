@@ -56,7 +56,6 @@ final class RouteWithMostTime
                 $routeWithMostTime['time']   = $array['time'];
                 $routeWithMostTime['memory'] = $array['memory'];
             }
-
         }
 
         $this->routeWithMostTime = $routeWithMostTime;

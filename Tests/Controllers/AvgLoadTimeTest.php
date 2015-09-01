@@ -1,6 +1,6 @@
 <?php
 
-Namespace Controllers;
+namespace Controllers;
 
 final class AvgLoadTimeTest extends \PHPUnit_Framework_TestCase
 {
