@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rgeraads/glowing-batman.svg?branch=develop)](https://travis-ci.org/rgeraads/glowing-batman)
+[![StyleCI](https://styleci.io/repos/20097861/shield)](https://styleci.io/repos/20097861)
 
 README
 ======
