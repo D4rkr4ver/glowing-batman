@@ -8,7 +8,7 @@ use Prophecy\Argument;
 
 class AvgLoadTimeSpec extends ObjectBehavior
 {
-    function it_is_initializable()
+    public function it_is_initializable()
     {
         $this->shouldHaveType(AvgLoadTime::class);
     }
